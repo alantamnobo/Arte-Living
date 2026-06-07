@@ -923,7 +923,7 @@ ${navHTML('about')}
             We are B2B specialists. Our clients are property developers, hotel groups, hospitality operators, and institutional investors. We speak their language: programme management, FF&E budgets, procurement schedules, and brand compliance.
           </p>
           <p>
-            What sets us apart is our ability to calibrate. A Mandarin Oriental project demands one standard; a purpose-built student accommodation block requires a different, equally considered, approach. We serve both — and everything in between.
+            What sets us apart is our ability to calibrate. A flagship five-star hotel demands one standard; a purpose-built student accommodation block requires a different, equally considered, approach. We serve both — and everything in between.
           </p>
         </div>
         
