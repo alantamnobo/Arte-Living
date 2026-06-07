@@ -428,7 +428,11 @@ function footerHTML() {
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-phone text-xs mt-1" style="color: #7B8EB9;"></i>
-              <span class="text-xs" style="color: rgba(255,255,255,0.55);">+44 (0) 20 0000 0000</span>
+              <a href="tel:+85256061921" class="text-xs hover:text-white transition-colors" style="color: rgba(255,255,255,0.55);">+852 5606 1921</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fab fa-whatsapp text-xs mt-1" style="color: #7B8EB9;"></i>
+              <a href="https://wa.me/85256061921" target="_blank" rel="noopener" class="text-xs hover:text-white transition-colors" style="color: rgba(255,255,255,0.55);">WhatsApp Us</a>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-map-marker-alt text-xs mt-1" style="color: #7B8EB9;"></i>
@@ -1384,8 +1388,15 @@ ${navHTML('contact')}
                 <i class="fas fa-phone text-xs" style="color: var(--arte-blue);"></i>
               </div>
               <div>
-                <p class="form-label mb-1">Phone</p>
-                <p class="text-sm" style="color: var(--arte-charcoal);">+44 (0) 20 0000 0000</p>
+                <p class="form-label mb-1">Phone / WhatsApp</p>
+                <a href="tel:+85256061921" class="text-sm hover:underline" style="color: var(--arte-charcoal);">+852 5606 1921</a>
+                <div class="mt-1">
+                  <a href="https://wa.me/85256061921" target="_blank" rel="noopener"
+                     class="inline-flex items-center gap-1.5 text-xs px-3 py-1 transition-all"
+                     style="background: rgba(37,211,102,0.1); color: #25D366; border: 1px solid rgba(37,211,102,0.3); border-radius: 2px;">
+                    <i class="fab fa-whatsapp text-sm"></i> Message on WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
             
