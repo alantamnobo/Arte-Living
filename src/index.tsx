@@ -581,7 +581,9 @@ ${navHTML('home')}
 ══════════════════════════════════════════════ -->
 <section style="background: var(--arte-charcoal);" class="py-8">
   <div class="max-w-7xl mx-auto px-8">
-    <div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-4 text-center">
+    <!-- Mobile: vertical left-aligned list, no orphan dots -->
+    <!-- Desktop: single horizontal centred row with dot separators -->
+    <div class="hidden md:flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
       <span class="text-xs tracking-widest uppercase" style="color: rgba(255,255,255,0.4); letter-spacing: 0.3em;">Luxury Hotels</span>
       <span style="color: rgba(255,255,255,0.15);">·</span>
       <span class="text-xs tracking-widest uppercase" style="color: rgba(255,255,255,0.4); letter-spacing: 0.3em;">Serviced Apartments</span>
@@ -590,6 +592,13 @@ ${navHTML('home')}
       <span style="color: rgba(255,255,255,0.15);">·</span>
       <span class="text-xs tracking-widest uppercase" style="color: rgba(255,255,255,0.4); letter-spacing: 0.3em;">Student Housing</span>
       <span style="color: rgba(255,255,255,0.15);">·</span>
+      <span class="text-xs tracking-widest uppercase" style="color: rgba(255,255,255,0.4); letter-spacing: 0.3em;">Senior Living</span>
+    </div>
+    <div class="flex md:hidden flex-col items-start gap-y-4">
+      <span class="text-xs tracking-widest uppercase" style="color: rgba(255,255,255,0.4); letter-spacing: 0.3em;">Luxury Hotels</span>
+      <span class="text-xs tracking-widest uppercase" style="color: rgba(255,255,255,0.4); letter-spacing: 0.3em;">Serviced Apartments</span>
+      <span class="text-xs tracking-widest uppercase" style="color: rgba(255,255,255,0.4); letter-spacing: 0.3em;">Corporate Offices</span>
+      <span class="text-xs tracking-widest uppercase" style="color: rgba(255,255,255,0.4); letter-spacing: 0.3em;">Student Housing</span>
       <span class="text-xs tracking-widest uppercase" style="color: rgba(255,255,255,0.4); letter-spacing: 0.3em;">Senior Living</span>
     </div>
   </div>
