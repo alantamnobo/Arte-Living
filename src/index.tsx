@@ -1378,17 +1378,31 @@ ${navHTML('contact')}
 <!-- ══════════════════════════════════════════════
      CONTACT HERO
 ══════════════════════════════════════════════ -->
-<section class="pt-32 pb-16 md:pt-40 md:pb-24" style="background: var(--arte-warm);">
-  <div class="max-w-7xl mx-auto px-8">
-    <div class="max-w-2xl">
+<section style="background: var(--arte-warm); overflow: hidden;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; min-height: 480px;">
+    
+    <!-- Left: Text -->
+    <div style="padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 4rem) clamp(3rem, 5vw, 5rem) clamp(2rem, 6vw, 5rem); display: flex; flex-direction: column; justify-content: center;">
       <p class="section-label mb-5 fade-in">Get In Touch</p>
-      <h1 class="heading-serif mb-6 fade-in" style="font-size: clamp(2.8rem, 5vw, 5rem); color: var(--arte-charcoal);">
+      <h1 class="heading-serif mb-6 fade-in" style="font-size: clamp(2.4rem, 4vw, 4.2rem); color: var(--arte-charcoal); line-height: 1.1;">
         Let's Build<br><em style="color: var(--arte-blue);">Something</em><br>Together
       </h1>
-      <p class="text-sm leading-relaxed fade-in" style="color: var(--arte-mid); max-width: 460px;">
+      <p class="text-sm leading-relaxed fade-in" style="color: var(--arte-mid); max-width: 420px;">
         Whether you're a hotel group with a new opening, a developer planning a large residential scheme, or an individual seeking truly exceptional furniture — we'd love to hear from you.
       </p>
     </div>
+    
+    <!-- Right: Photo -->
+    <div style="position: relative; overflow: hidden; min-height: 420px;">
+      <img 
+        src="https://sspark.genspark.ai/cfimages?u1=R3UY4ENbwTmy2hRh78BK2ZMhJf0iirp9I6aGepDXVh2dXIl%2Fcgj8GIu9snJ8WXTXzZH927U%2F1ABQI6VJt0sZCfoCqttxP1qj%2B5Kcrm8vXVq4OdWrTBq70pQ%2FPk%2FcakcDOR%2BLmbsgd2AvwKDq3AXDgw%3D%3D&u2=tLGz5GVswlVdey0x&width=2560"
+        alt="Bespoke luxury bedroom interior — ARTé Living"
+        style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center;"
+      />
+      <!-- Subtle gradient blending left edge into cream -->
+      <div style="position: absolute; inset: 0; background: linear-gradient(to right, var(--arte-warm) 0%, transparent 18%); pointer-events: none;"></div>
+    </div>
+    
   </div>
 </section>
 
