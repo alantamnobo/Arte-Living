@@ -734,27 +734,27 @@ ${navHTML('home')}
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
       
       <div class="fade-in">
-        <div class="stat-number mb-2"><span data-target="200">0</span>+</div>
+        <div class="stat-number mb-2"><span data-target="1000">0</span>+</div>
         <div class="arte-divider mx-auto"></div>
-        <p class="text-xs tracking-widest uppercase mt-3" style="color: rgba(255,255,255,0.4); letter-spacing: 0.2em;">Projects Delivered</p>
+        <p class="text-xs tracking-widest uppercase mt-3" style="color: rgba(255,255,255,0.4); letter-spacing: 0.2em;">Projects Globally</p>
       </div>
       
       <div class="fade-in">
-        <div class="stat-number mb-2"><span data-target="18">0</span></div>
+        <div class="stat-number mb-2"><span data-target="350">0</span></div>
         <div class="arte-divider mx-auto"></div>
-        <p class="text-xs tracking-widest uppercase mt-3" style="color: rgba(255,255,255,0.4); letter-spacing: 0.2em;">Countries</p>
+        <p class="text-xs tracking-widest uppercase mt-3" style="color: rgba(255,255,255,0.4); letter-spacing: 0.2em;">Skilled Employees</p>
       </div>
       
       <div class="fade-in">
-        <div class="stat-number mb-2"><span data-target="50">0</span>+</div>
+        <div class="stat-number mb-2"><span data-target="4">0</span></div>
         <div class="arte-divider mx-auto"></div>
-        <p class="text-xs tracking-widest uppercase mt-3" style="color: rgba(255,255,255,0.4); letter-spacing: 0.2em;">Hotel Brands</p>
+        <p class="text-xs tracking-widest uppercase mt-3" style="color: rgba(255,255,255,0.4); letter-spacing: 0.2em;">Hotel Brands Served</p>
       </div>
       
       <div class="fade-in">
-        <div class="stat-number mb-2"><span data-target="15">0</span></div>
+        <div class="stat-number mb-2"><span data-target="10">0</span>+</div>
         <div class="arte-divider mx-auto"></div>
-        <p class="text-xs tracking-widest uppercase mt-3" style="color: rgba(255,255,255,0.4); letter-spacing: 0.2em;">Years of Craft</p>
+        <p class="text-xs tracking-widest uppercase mt-3" style="color: rgba(255,255,255,0.4); letter-spacing: 0.2em;">Years of Experience</p>
       </div>
       
     </div>
@@ -890,7 +890,7 @@ ${navHTML('about')}
         Crafting Spaces That<br><em style="color: var(--arte-blue);">Set the Standard</em>
       </h1>
       <p class="text-sm leading-relaxed fade-in" style="color: var(--arte-mid); max-width: 560px; font-size: 0.95rem;">
-        Founded on a belief that great furniture transforms not just spaces but the people within them, ARTé has spent fifteen years earning the trust of the world's most exacting clients — from five-star hotel groups to forward-thinking student housing developers.
+        ARTé is a full-service furniture manufacturer offering a true 'one-stop shop' — from in-house design and manufacturing through to warehousing, freight, and installation. With over a decade of experience and more than 1,000 projects completed globally, we are trusted by some of the world's most demanding clients.
       </p>
     </div>
   </div>
@@ -917,30 +917,75 @@ ${navHTML('about')}
         <div class="arte-divider"></div>
         <div class="mt-6 space-y-5 text-sm leading-relaxed" style="color: var(--arte-mid);">
           <p>
-            ARTé was born from a simple but powerful conviction: that the built environment — whether a Mayfair hotel suite or a first-year student bedroom — deserves furniture of genuine quality, appropriate to its context.
+            ARTé is a full-service furniture manufacturer that delivers a comprehensive 'one-stop shop' experience — covering in-house design, manufacturing, warehousing, freight, and installation under one roof.
           </p>
           <p>
-            We are B2B specialists. Our clients are property developers, hotel groups, hospitality operators, and institutional investors. We speak their language: programme management, FF&E budgets, procurement schedules, and brand compliance.
+            Based in Foshan with a team of 350 skilled employees, we combine manufacturing strength with rigorous quality control to ensure every project is delivered on time, on spec, and to the highest standard.
           </p>
           <p>
             What sets us apart is our ability to calibrate. A flagship five-star hotel demands one standard; a purpose-built student accommodation block requires a different, equally considered, approach. We serve both — and everything in between.
           </p>
         </div>
         
-        <div class="grid grid-cols-2 gap-6 mt-10">
+        <div class="grid grid-cols-3 gap-6 mt-10">
           <div>
-            <div class="stat-number mb-1" style="font-size: 2.5rem;"><span data-target="200">0</span>+</div>
-            <p class="text-xs tracking-wide uppercase" style="color: var(--arte-mid);">Projects Completed</p>
+            <div class="stat-number mb-1" style="font-size: 2.2rem;"><span data-target="1000">0</span>+</div>
+            <p class="text-xs tracking-wide uppercase" style="color: var(--arte-mid);">Projects Globally</p>
           </div>
           <div>
-            <div class="stat-number mb-1" style="font-size: 2.5rem;"><span data-target="18">0</span></div>
-            <p class="text-xs tracking-wide uppercase" style="color: var(--arte-mid);">Countries Served</p>
+            <div class="stat-number mb-1" style="font-size: 2.2rem;"><span data-target="350">0</span></div>
+            <p class="text-xs tracking-wide uppercase" style="color: var(--arte-mid);">Skilled Employees</p>
+          </div>
+          <div>
+            <div class="stat-number mb-1" style="font-size: 2.2rem;"><span data-target="10">0</span>+</div>
+            <p class="text-xs tracking-wide uppercase" style="color: var(--arte-mid);">Years Experience</p>
           </div>
         </div>
       </div>
       
     </div>
     
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     TRACK RECORD
+══════════════════════════════════════════════ -->
+<section class="py-16" style="background: var(--arte-warm); border-top: 1px solid #E8E4DF; border-bottom: 1px solid #E8E4DF;">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="max-w-xl mb-10 fade-in">
+      <p class="section-label mb-4">Track Record</p>
+      <h2 class="heading-serif" style="font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--arte-charcoal);">
+        Trusted by Leading<br><em style="color: var(--arte-blue);">Brands Worldwide</em>
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in">
+      
+      <div class="p-8" style="background: #fff; border: 1px solid #E8E4DF;">
+        <div class="w-8 h-px mb-5" style="background: var(--arte-blue);"></div>
+        <h3 class="heading-serif text-lg mb-3" style="color: var(--arte-charcoal);">Global Hotel Partners</h3>
+        <p class="text-xs leading-relaxed" style="color: #6B6B6B;">
+          Partnered with leading international hotel brands including Hilton, Hyatt Regency, DoubleTree, and Sheraton — delivering FF&E solutions that meet the exacting standards of global hospitality operators.
+        </p>
+      </div>
+      
+      <div class="p-8" style="background: #fff; border: 1px solid #E8E4DF;">
+        <div class="w-8 h-px mb-5" style="background: var(--arte-blue);"></div>
+        <h3 class="heading-serif text-lg mb-3" style="color: var(--arte-charcoal);">Landmark Overseas Projects</h3>
+        <p class="text-xs leading-relaxed" style="color: #6B6B6B;">
+          Involved in significant international developments including Thames City in London and Malaysia's Opera House — demonstrating our capability to deliver complex, large-scale projects across borders.
+        </p>
+      </div>
+      
+      <div class="p-8" style="background: #fff; border: 1px solid #E8E4DF;">
+        <div class="w-8 h-px mb-5" style="background: var(--arte-blue);"></div>
+        <h3 class="heading-serif text-lg mb-3" style="color: var(--arte-charcoal);">Manufacturing Excellence</h3>
+        <p class="text-xs leading-relaxed" style="color: #6B6B6B;">
+          Based in Foshan — China's furniture manufacturing heartland — with 350 skilled employees and full in-house capabilities: design, production, QA, warehousing, freight, and installation.
+        </p>
+      </div>
+      
+    </div>
   </div>
 </section>
 
