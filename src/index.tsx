@@ -75,6 +75,7 @@ function headHTML(title: string, description: string) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} — ARTé | The Living Standard</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%237B8EB9'>A</text></svg>">
     <meta name="description" content="${description}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -350,6 +351,22 @@ function headHTML(title: string, description: string) {
       
       /* ── Horizontal rule ── */
       hr.arte { border: none; border-top: 1px solid var(--arte-border); }
+      
+      /* ── Filter buttons ── */
+      .filter-active {
+        border-color: #7B8EB9 !important;
+        color: #7B8EB9 !important;
+        background: rgba(123,142,185,0.10) !important;
+      }
+      .filter-inactive {
+        border-color: #E8E4DF !important;
+        color: #6B6B6B !important;
+        background: transparent !important;
+      }
+      .filter-inactive:hover {
+        border-color: #7B8EB9 !important;
+        color: #7B8EB9 !important;
+      }
       
       /* Mobile adjustments */
       @media (max-width: 768px) {
@@ -1104,8 +1121,18 @@ function projectsPage() {
     },
   ]
 
-  const cards = projects.map((p, i) => `
-    <article class="project-card fade-in" style="animation-delay: ${i * 0.1}s;">
+  const sectorMap: Record<string, string> = {
+    'Luxury Hotel': 'hotel',
+    'Corporate Office': 'office',
+    'Student Housing': 'student',
+    'Serviced Apartments': 'residential',
+    'Senior Living': 'residential',
+  }
+
+  const cards = projects.map((p, i) => {
+    const sectorKey = sectorMap[p.sector] || 'other'
+    return `
+    <article class="project-card fade-in" data-sector="${sectorKey}" style="animation-delay: ${i * 0.1}s;">
       <div class="aspect-4-3 overflow-hidden relative">
         <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover">
         <div class="project-overlay"></div>
@@ -1113,19 +1140,20 @@ function projectsPage() {
           <span class="text-xs px-3 py-1 tracking-wider uppercase" style="background: rgba(123,142,185,0.85); color: #fff; font-size: 0.6rem; letter-spacing: 0.2em;">${p.sector}</span>
         </div>
       </div>
-      <div class="p-6" style="background: #fff; border: 1px solid var(--arte-border); border-top: none;">
+      <div class="p-6" style="background: #fff; border: 1px solid #E8E4DF; border-top: none;">
         <div class="arte-divider mb-4"></div>
         <h3 class="heading-serif text-xl mb-1">${p.title}</h3>
-        <p class="text-xs mb-4" style="color: var(--arte-mid);">
-          <i class="fas fa-map-marker-alt text-xs mr-1" style="color: var(--arte-blue);"></i> ${p.location}
+        <p class="text-xs mb-4" style="color: #6B6B6B;">
+          <i class="fas fa-map-marker-alt text-xs mr-1" style="color: #7B8EB9;"></i> ${p.location}
         </p>
         <div class="flex flex-wrap gap-2 mb-4">
-          <span class="text-xs px-2 py-1" style="background: rgba(123,142,185,0.08); color: var(--arte-blue);">${p.tier}</span>
+          <span class="text-xs px-2 py-1" style="background: rgba(123,142,185,0.08); color: #7B8EB9;">${p.tier}</span>
         </div>
-        <p class="text-xs" style="color: var(--arte-mid);">${p.scope}</p>
+        <p class="text-xs" style="color: #6B6B6B;">${p.scope}</p>
       </div>
     </article>
-  `).join('')
+  `
+  }).join('')
 
   return headHTML('Projects', 'Browse ARTé\'s portfolio of bespoke furniture projects spanning luxury hotels, serviced apartments, offices, student housing and more.') + `
 
@@ -1151,15 +1179,15 @@ ${navHTML('projects')}
 <!-- ══════════════════════════════════════════════
      FILTER BAR
 ══════════════════════════════════════════════ -->
-<section style="background: var(--arte-cream); border-bottom: 1px solid var(--arte-border);" class="sticky top-[72px] z-40">
+<section style="background: #FAF9F7; border-bottom: 1px solid #E8E4DF;" class="sticky top-[72px] z-40">
   <div class="max-w-7xl mx-auto px-8 py-4">
     <div class="flex flex-wrap gap-3 items-center">
-      <span class="text-xs tracking-widest uppercase mr-2" style="color: var(--arte-mid);">Filter:</span>
-      <button onclick="filterProjects('all')" class="filter-btn active text-xs px-4 py-2 border tracking-wider uppercase transition-all" style="border-color: var(--arte-blue); color: var(--arte-blue); background: rgba(123,142,185,0.08);" data-filter="all">All</button>
-      <button onclick="filterProjects('hotel')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all" style="border-color: var(--arte-border); color: var(--arte-mid);" data-filter="hotel">Hotels</button>
-      <button onclick="filterProjects('office')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all" style="border-color: var(--arte-border); color: var(--arte-mid);" data-filter="office">Offices</button>
-      <button onclick="filterProjects('residential')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all" style="border-color: var(--arte-border); color: var(--arte-mid);" data-filter="residential">Residential</button>
-      <button onclick="filterProjects('student')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all" style="border-color: var(--arte-border); color: var(--arte-mid);" data-filter="student">Student</button>
+      <span class="text-xs tracking-widest uppercase mr-2" style="color: #6B6B6B;">Filter:</span>
+      <button onclick="filterProjects('all')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-active" data-filter="all">All</button>
+      <button onclick="filterProjects('hotel')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-filter="hotel">Hotels</button>
+      <button onclick="filterProjects('office')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-filter="office">Offices</button>
+      <button onclick="filterProjects('residential')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-filter="residential">Residential</button>
+      <button onclick="filterProjects('student')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-filter="student">Student</button>
     </div>
   </div>
 </section>
@@ -1192,17 +1220,33 @@ ${navHTML('projects')}
 
 <script>
 function filterProjects(filter) {
+  // Update button styles
   document.querySelectorAll('.filter-btn').forEach(btn => {
-    if (btn.getAttribute('data-filter') === filter) {
-      btn.style.borderColor = '#7B8EB9';
-      btn.style.color = '#7B8EB9';
-      btn.style.background = 'rgba(123,142,185,0.08)';
-    } else {
-      btn.style.borderColor = '#E8E4DF';
-      btn.style.color = '#6B6B6B';
-      btn.style.background = 'transparent';
-    }
+    const isActive = btn.getAttribute('data-filter') === filter;
+    btn.classList.toggle('filter-active', isActive);
+    btn.classList.toggle('filter-inactive', !isActive);
   });
+
+  // Show/hide project cards
+  const cards = document.querySelectorAll('#projects-grid article[data-sector]');
+  let visibleCount = 0;
+  cards.forEach(card => {
+    const sector = card.getAttribute('data-sector');
+    const show = filter === 'all' || sector === filter;
+    card.style.display = show ? '' : 'none';
+    if (show) visibleCount++;
+  });
+
+  // Show empty state if nothing matches
+  let emptyMsg = document.getElementById('no-projects-msg');
+  if (!emptyMsg) {
+    emptyMsg = document.createElement('p');
+    emptyMsg.id = 'no-projects-msg';
+    emptyMsg.style.cssText = 'color:#6B6B6B; font-size:0.85rem; grid-column:1/-1; padding:40px 0; text-align:center;';
+    emptyMsg.textContent = 'No projects in this category yet. More coming soon.';
+    document.getElementById('projects-grid').appendChild(emptyMsg);
+  }
+  emptyMsg.style.display = visibleCount === 0 ? '' : 'none';
 }
 </script>
 
