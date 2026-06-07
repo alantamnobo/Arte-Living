@@ -905,8 +905,8 @@ ${navHTML('about')}
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       
       <div class="fade-in">
-        <img src="https://sspark.genspark.ai/cfimages?u1=H%2Fy8LepSBTwBKsp%2B41haSQl%2BkxZa0vnjwTPQpmHl6glIZalSbR48xGSbYbP4QX3mpzTa0WaOaBnbxSWncN6PDIJUNAX3CkRBTp8AXY%2FknRyvPbbOcJd4V%2BChJDGDW5LAWXbpNiJztmHSKiApYwbt%2B%2BXh39kpw8Wkdw%3D%3D&u2=R97ZRmsjpBrqjKrp&width=2560" 
-             alt="ARTé Craftsmanship" class="w-full object-cover" style="aspect-ratio: 4/5;">
+        <img src="https://sspark.genspark.ai/cfimages?u1=JLPt2F7Jg2WCFVLkFWJjpfzXavqXnfrvfW55I1sCXHtNQiPPMyL39gstAAWxZCL6fQLob9zKq1%2FMOAbW89kqn3rciCz8KVKQEA%3D%3D&u2=WPqh8SZQvF8BMUs6&width=2560" 
+             alt="ARTé Elegant Furniture" class="w-full object-cover" style="aspect-ratio: 4/5;">
       </div>
       
       <div class="fade-in">
