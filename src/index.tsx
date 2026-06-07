@@ -905,7 +905,7 @@ ${navHTML('about')}
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       
       <div class="fade-in">
-        <img src="https://sspark.genspark.ai/cfimages?u1=JLPt2F7Jg2WCFVLkFWJjpfzXavqXnfrvfW55I1sCXHtNQiPPMyL39gstAAWxZCL6fQLob9zKq1%2FMOAbW89kqn3rciCz8KVKQEA%3D%3D&u2=WPqh8SZQvF8BMUs6&width=2560" 
+        <img src="https://www.genspark.ai/api/files/s/Wej9yQEa?cache_control=3600" 
              alt="ARTé Elegant Furniture" class="w-full object-cover" style="aspect-ratio: 4/5;">
       </div>
       
