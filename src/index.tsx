@@ -424,7 +424,7 @@ function footerHTML() {
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
               <i class="fas fa-envelope text-xs mt-1" style="color: #7B8EB9;"></i>
-              <a href="mailto:hello@arte-furniture.com" class="text-xs hover:text-white transition-colors" style="color: rgba(255,255,255,0.55);">hello@arte-furniture.com</a>
+              <a href="mailto:enquiries@arte-living.com" class="text-xs hover:text-white transition-colors" style="color: rgba(255,255,255,0.55);">enquiries@arte-living.com</a>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-phone text-xs mt-1" style="color: #7B8EB9;"></i>
@@ -434,10 +434,7 @@ function footerHTML() {
               <i class="fab fa-whatsapp text-xs mt-1" style="color: #7B8EB9;"></i>
               <a href="https://wa.me/85256061921" target="_blank" rel="noopener" class="text-xs hover:text-white transition-colors" style="color: rgba(255,255,255,0.55);">WhatsApp Us</a>
             </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-map-marker-alt text-xs mt-1" style="color: #7B8EB9;"></i>
-              <span class="text-xs leading-relaxed" style="color: rgba(255,255,255,0.55);">London, United Kingdom</span>
-            </li>
+
           </ul>
           <div class="flex gap-4 mt-8">
             <a href="#" class="w-8 h-8 border flex items-center justify-center transition-all hover:border-white" style="border-color: rgba(255,255,255,0.2);">
@@ -1379,7 +1376,7 @@ ${navHTML('contact')}
               </div>
               <div>
                 <p class="form-label mb-1">Email</p>
-                <a href="mailto:hello@arte-furniture.com" class="text-sm hover:underline" style="color: var(--arte-charcoal);">hello@arte-furniture.com</a>
+                <a href="mailto:enquiries@arte-living.com" class="text-sm hover:underline" style="color: var(--arte-charcoal);">enquiries@arte-living.com</a>
               </div>
             </div>
             
@@ -1400,15 +1397,7 @@ ${navHTML('contact')}
               </div>
             </div>
             
-            <div class="flex items-start gap-4">
-              <div class="w-8 h-8 border flex items-center justify-center flex-shrink-0" style="border-color: var(--arte-blue);">
-                <i class="fas fa-map-marker-alt text-xs" style="color: var(--arte-blue);"></i>
-              </div>
-              <div>
-                <p class="form-label mb-1">Showroom</p>
-                <p class="text-sm leading-relaxed" style="color: var(--arte-charcoal);">London Design District<br>London, United Kingdom</p>
-              </div>
-            </div>
+
           </div>
         </div>
         
