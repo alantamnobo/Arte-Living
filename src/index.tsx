@@ -1050,6 +1050,77 @@ ${navHTML('about')}
 </section>
 
 <!-- ══════════════════════════════════════════════
+     DESIGN PHILOSOPHY
+══════════════════════════════════════════════ -->
+<section class="py-24 md:py-32" style="background: #ffffff;">
+  <div class="max-w-7xl mx-auto px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      
+      <!-- Image Column -->
+      <div class="fade-in relative">
+        <div style="position: relative; overflow: hidden; aspect-ratio: 4/5;">
+          <img 
+            src="https://sspark.genspark.ai/cfimages?u1=g0sKAoa%2B04FZpsWEMxvSSgrWgQbALS%2B%2FLNLwltCo%2Bj8iWL%2BTMe4n3ggjT%2BTgPRUePY8QJ7ydnH1vywXZsdV%2BopWXQnrPrGwA%2Fny7Fq3MbUuKil%2BafWiF6Dm6lYymV2zv4WJ38eEkXt73RjbKMCh6DZuUogrJJYMmp2kfCUok71sdXKxZ39GBvOEIcBlaH0k%3D&u2=HmFUJ7d8BqoZ0R3v&width=2560"
+            alt="ARTé interior design philosophy — minimalist living space in cream tones"
+            style="width: 100%; height: 100%; object-fit: cover; display: block;"
+          />
+          <div style="position: absolute; left: 0; top: 0; width: 4px; height: 100%; background: var(--arte-blue);"></div>
+        </div>
+        <div style="position: absolute; bottom: -1.5rem; right: 0; background: var(--arte-charcoal); padding: 1.5rem 2rem;">
+          <p class="section-label" style="color: var(--arte-blue); margin-bottom: 0.25rem;">Our Approach</p>
+          <p class="heading-serif text-white" style="font-size: 1.1rem;">Design with<br><em>Intent</em></p>
+        </div>
+      </div>
+      
+      <!-- Text Column -->
+      <div class="fade-in">
+        <p class="section-label mb-4">Interior Design</p>
+        <h2 class="heading-serif mb-8" style="font-size: clamp(2rem, 3.5vw, 3rem); color: var(--arte-charcoal); line-height: 1.15;">
+          Spaces That Begin<br>with <em style="color: var(--arte-blue);">Listening</em>
+        </h2>
+        
+        <div class="arte-divider mb-8"></div>
+        
+        <div style="display: flex; flex-direction: column; gap: 1.75rem;">
+          
+          <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+            <div style="width: 2px; background: var(--arte-blue); flex-shrink: 0; margin-top: 0.3rem; height: 3rem;"></div>
+            <p style="font-size: 0.95rem; line-height: 1.9; color: var(--arte-mid);">
+              Every project begins with a genuine conversation. We take the time to understand not just the brief, but the people behind it — their vision, their guests, and the experience they want to create. This depth of understanding is what allows us to translate aspiration into spaces that feel entirely considered.
+            </p>
+          </div>
+          
+          <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+            <div style="width: 2px; background: var(--arte-blue); flex-shrink: 0; margin-top: 0.3rem; height: 3rem;"></div>
+            <p style="font-size: 0.95rem; line-height: 1.9; color: var(--arte-mid);">
+              Our in-house design team operates at the intersection of creativity and precision. They bridge the gap between concept and execution — working in close coordination with our procurement and production teams to ensure every specification is upheld, every timeline is respected, and every detail is delivered as intended.
+            </p>
+          </div>
+          
+          <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+            <div style="width: 2px; background: var(--arte-blue); flex-shrink: 0; margin-top: 0.3rem; height: 3rem;"></div>
+            <p style="font-size: 0.95rem; line-height: 1.9; color: var(--arte-mid);">
+              This integrated approach streamlines communication across every stage of a project — reducing friction, elevating quality, and giving our clients confidence that the vision they shared at the outset is the one that arrives at their door.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div style="margin-top: 2.5rem; padding: 1.75rem 2rem; border-left: 3px solid var(--arte-blue); background: var(--arte-cream);">
+          <p class="heading-serif" style="font-size: 1.1rem; color: var(--arte-charcoal); font-style: italic; line-height: 1.6;">
+            "Good design is not seen — it is felt. We craft environments where every element earns its place."
+          </p>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
      PROCESS
 ══════════════════════════════════════════════ -->
 <section class="py-24 md:py-32" style="background: var(--arte-cream);">
