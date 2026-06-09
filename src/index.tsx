@@ -1575,7 +1575,7 @@ Every piece was designed and manufactured to brief: bespoke executive desks fini
 
 The result is an environment that projects authority and confidence while remaining genuinely comfortable for the people who work in it every day.`,
     gallery: [
-      { src: '/static/hk-office-cover.jpg', caption: 'Executive Office — Victoria Harbour view' },
+      { src: '/static/FveZLY8q.jpg', caption: 'Executive Office — Victoria Harbour view' },
       { src: '/static/hk-office-boardroom.jpg', caption: 'Boardroom — 12-seat conference table, harbour aspect' },
       { src: '/static/hk-office-exec-room.jpg', caption: "Director's Office — bespoke desk & executive seating" },
       { src: '/static/hk-office-bar.jpg', caption: 'Hospitality Bar — walnut joinery, marble countertop' },
