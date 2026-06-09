@@ -1361,6 +1361,15 @@ function projectsPage() {
       scope: 'Reception, 8 floors, executive suites',
       img: 'https://sspark.genspark.ai/cfimages?u1=pkixtz9WrUjaXNozkNCiMeVnX5benImBVXkoNjHbYGxT40qI8nY%2BfkDnfHFzHvgS8vRFfAvXgXwMgEnkbGf6iOr44giO2Pod0MNEaaduTNOH%2BXQUQ%2Bvxl5G2gReiCxM726AzujjdWg%3D%3D&u2=rhk3XtGlu285nbvX&width=2560',
     },
+    {
+      title: 'Harbour View Executive Suite',
+      location: 'Hong Kong',
+      locationKey: 'hk',
+      sector: 'Corporate Office',
+      tier: 'Premium Office',
+      scope: 'Executive suite, meeting rooms & lounge',
+      img: 'https://www.genspark.ai/api/files/s/FveZLY8q',
+    },
   ]
 
   const sectorMap: Record<string, string> = {
