@@ -1084,44 +1084,39 @@ ${navHTML('about')}
       
       <!-- Text Column -->
       <div class="fade-in">
-        <p class="section-label mb-4">Interior Design</p>
-        <h2 class="heading-serif mb-8" style="font-size: clamp(2rem, 3.5vw, 3rem); color: var(--arte-charcoal); line-height: 1.15;">
-          Spaces That Begin<br>with <em style="color: var(--arte-blue);">Listening</em>
+        <p class="section-label mb-4">Our Craft</p>
+        <h2 class="mb-5" style="font-size: clamp(1.6rem, 2.8vw, 2.2rem); color: var(--arte-charcoal); line-height: 1.2; font-weight: 700; font-family: 'Inter', sans-serif;">
+          Built to Deliver — <em style="font-style: italic;">Every Detail, Every Time</em>
         </h2>
-        
-        <div class="arte-divider mb-8"></div>
-        
-        <div style="display: flex; flex-direction: column; gap: 1.75rem;">
-          
-          <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
-            <div style="width: 2px; background: var(--arte-blue); flex-shrink: 0; margin-top: 0.3rem; height: 3rem;"></div>
-            <p style="font-size: 0.95rem; line-height: 1.9; color: var(--arte-mid);">
-              Every project begins with a genuine conversation. We take the time to understand not just the brief, but the people behind it — their vision, their guests, and the experience they want to create. This depth of understanding is what allows us to translate aspiration into spaces that feel entirely considered.
-            </p>
-          </div>
-          
-          <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
-            <div style="width: 2px; background: var(--arte-blue); flex-shrink: 0; margin-top: 0.3rem; height: 3rem;"></div>
-            <p style="font-size: 0.95rem; line-height: 1.9; color: var(--arte-mid);">
-              Our in-house design team operates at the intersection of creativity and precision. They bridge the gap between concept and execution — working in close coordination with our procurement and production teams to ensure every specification is upheld, every timeline is respected, and every detail is delivered as intended.
-            </p>
-          </div>
-          
-          <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
-            <div style="width: 2px; background: var(--arte-blue); flex-shrink: 0; margin-top: 0.3rem; height: 3rem;"></div>
-            <p style="font-size: 0.95rem; line-height: 1.9; color: var(--arte-mid);">
-              This integrated approach streamlines communication across every stage of a project — reducing friction, elevating quality, and giving our clients confidence that the vision they shared at the outset is the one that arrives at their door.
-            </p>
-          </div>
-          
+
+        <hr style="border: none; border-top: 1px solid #e0dbd4; margin-bottom: 1.75rem;" />
+
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+
+          <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
+            We are, at heart, a furniture manufacturer. Design is part of what we do, but our real craft is turning our clients' designs into reality — built with precision, finished with care, delivered on time.
+          </p>
+
+          <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
+            Behind every piece is a factory, a team, and decades of know-how. Skilled people who take pride in their work. Engineers and project managers who understand that a great product is only half the promise — the other half is execution.
+          </p>
+
+          <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
+            That's where we stand apart. We don't just produce furniture. We deliver projects. Large, complex, multi-site projects — across cities, across continents — completed on schedule and to specification. From the first prototype to the final installation, we manage every stage so our clients don't have to worry.
+          </p>
+
+          <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
+            Wherever the project is in the world, we are ready. Same standards. Same discipline. Same result.
+          </p>
+
         </div>
-        
-        <div style="margin-top: 2.5rem; padding: 1.75rem 2rem; border-left: 3px solid var(--arte-blue); background: var(--arte-cream);">
-          <p class="heading-serif" style="font-size: 1.1rem; color: var(--arte-charcoal); font-style: italic; line-height: 1.6;">
-            "Good design is not seen — it is felt. We craft environments where every element earns its place."
+
+        <div style="margin-top: 1.75rem; padding-left: 1.25rem; border-left: 3px solid var(--arte-charcoal);">
+          <p style="font-size: 0.95rem; line-height: 1.75; color: var(--arte-charcoal); font-style: italic;">
+            "A beautiful design deserves a flawless build. Our job is to make sure it arrives — on time, on spec, and exactly as imagined."
           </p>
         </div>
-        
+
       </div>
       
     </div>
