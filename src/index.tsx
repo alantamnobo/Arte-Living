@@ -1141,44 +1141,147 @@ ${navHTML('about')}
 ══════════════════════════════════════════════ -->
 <section class="py-24 md:py-32" style="background: var(--arte-cream);">
   <div class="max-w-7xl mx-auto px-8">
-    
-    <div class="max-w-xl mb-16 fade-in">
-      <p class="section-label mb-4">How We Work</p>
-      <h2 class="heading-serif" style="font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--arte-charcoal);">
-        From Brief to<br><em style="color: var(--arte-blue);">Beautiful Space</em>
-      </h2>
+
+    <!-- Header -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 fade-in" style="align-items: end;">
+      <div>
+        <p class="section-label mb-4">How We Work</p>
+        <h2 class="heading-serif" style="font-size: clamp(2.2rem, 4vw, 3.2rem); color: var(--arte-charcoal); line-height: 1.15;">
+          From Brief to<br><em style="color: var(--arte-blue);">Built</em>
+        </h2>
+      </div>
+      <div>
+        <p style="font-size: 0.9rem; line-height: 1.85; color: var(--arte-mid); max-width: 520px;">
+          We are a manufacturer. Most of our work is large B2B projects, and we respect the original designer's vision. Our job is to make it real — on time, on spec, anywhere in the world.
+        </p>
+        <p style="font-size: 0.9rem; line-height: 1.85; color: var(--arte-mid); max-width: 520px; margin-top: 1rem;">
+          What makes that possible is communication. We sit between the sponsor and the contractor, and we keep everyone aligned from day one to handover. That is the role ARTé plays best — <strong style="color: var(--arte-charcoal); font-weight: 600;">the project manager who turns concept into reality.</strong>
+        </p>
+      </div>
     </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      
-      <div class="fade-in">
-        <div class="process-step-num mb-4">01</div>
-        <div class="arte-divider mb-4"></div>
-        <h3 class="heading-serif text-xl mb-3">Discovery &<br>Brief</h3>
-        <p class="text-xs leading-relaxed" style="color: var(--arte-mid);">We immerse ourselves in your brand, project parameters, budget, and programme. No assumptions — just thorough understanding.</p>
+
+    <!-- Arrow Ribbon — Desktop -->
+    <div class="hidden md:block mb-16 fade-in">
+      <!-- Connecting line -->
+      <div style="position: relative; display: flex; align-items: flex-start;">
+        <!-- The continuous line sits behind the nodes -->
+        <div style="position: absolute; top: 1.75rem; left: calc(10% + 1rem); right: calc(10% + 1rem); height: 1px; background: linear-gradient(to right, var(--arte-blue) 0%, rgba(123,142,185,0.25) 100%); z-index: 0;"></div>
+
+        <!-- Step 1 -->
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1;">
+          <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: var(--arte-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: #fff; font-weight: 500; letter-spacing: 0.05em;">01</span>
+          </div>
+          <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.75rem;">Listen</h3>
+          <p style="font-size: 0.78rem; line-height: 1.7; color: var(--arte-mid); max-width: 140px;">Meet the developer and designer. Understand the brief, budget, timeline, and standard expected. No assumptions.</p>
+        </div>
+
+        <!-- Arrow -->
+        <div style="padding-top: 1.4rem; color: rgba(123,142,185,0.5); font-size: 1rem; flex-shrink: 0;">›</div>
+
+        <!-- Step 2 -->
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1;">
+          <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: #fff; border: 1.5px solid var(--arte-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--arte-blue); font-weight: 500; letter-spacing: 0.05em;">02</span>
+          </div>
+          <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.75rem;">Plan</h3>
+          <p style="font-size: 0.78rem; line-height: 1.7; color: var(--arte-mid); max-width: 140px;">Translate design intent into a production plan. Drawings reviewed, materials sourced, samples approved before we cut a single piece.</p>
+        </div>
+
+        <!-- Arrow -->
+        <div style="padding-top: 1.4rem; color: rgba(123,142,185,0.5); font-size: 1rem; flex-shrink: 0;">›</div>
+
+        <!-- Step 3 -->
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1;">
+          <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: #fff; border: 1.5px solid var(--arte-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--arte-blue); font-weight: 500; letter-spacing: 0.05em;">03</span>
+          </div>
+          <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.75rem;">Make</h3>
+          <p style="font-size: 0.78rem; line-height: 1.7; color: var(--arte-mid); max-width: 140px;">Skilled craftspeople, tight QA at every stage, regular updates back to the design and project team.</p>
+        </div>
+
+        <!-- Arrow -->
+        <div style="padding-top: 1.4rem; color: rgba(123,142,185,0.5); font-size: 1rem; flex-shrink: 0;">›</div>
+
+        <!-- Step 4 -->
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1;">
+          <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: #fff; border: 1.5px solid var(--arte-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--arte-blue); font-weight: 500; letter-spacing: 0.05em;">04</span>
+          </div>
+          <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.75rem;">Deliver</h3>
+          <p style="font-size: 0.78rem; line-height: 1.7; color: var(--arte-mid); max-width: 140px;">Packing, shipping, customs, schedule — we handle the logistics. Wherever the site, the pieces arrive ready to install.</p>
+        </div>
+
+        <!-- Arrow -->
+        <div style="padding-top: 1.4rem; color: rgba(123,142,185,0.5); font-size: 1rem; flex-shrink: 0;">›</div>
+
+        <!-- Step 5 -->
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1;">
+          <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: #fff; border: 1.5px solid var(--arte-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--arte-blue); font-weight: 500; letter-spacing: 0.05em;">05</span>
+          </div>
+          <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.75rem;">Install</h3>
+          <p style="font-size: 0.78rem; line-height: 1.7; color: var(--arte-mid); max-width: 140px;">Our local team joins yours on the ground. Phased installation, snagging resolved. Handover only when you are satisfied.</p>
+        </div>
+
       </div>
-      
-      <div class="fade-in">
-        <div class="process-step-num mb-4">02</div>
-        <div class="arte-divider mb-4"></div>
-        <h3 class="heading-serif text-xl mb-3">Design &<br>Specification</h3>
-        <p class="text-xs leading-relaxed" style="color: var(--arte-mid);">Our design team develops bespoke concepts, material palettes and technical drawings — aligned to your aesthetic and specifications.</p>
+    </div>
+
+    <!-- Vertical Timeline — Mobile -->
+    <div class="md:hidden mb-12 fade-in">
+      <div style="position: relative; padding-left: 3rem;">
+        <!-- Vertical line -->
+        <div style="position: absolute; left: 1.6rem; top: 0.5rem; bottom: 0.5rem; width: 1px; background: linear-gradient(to bottom, var(--arte-blue), rgba(123,142,185,0.15));"></div>
+
+        <!-- Step -->
+        <div style="position: relative; margin-bottom: 2.25rem;">
+          <div style="position: absolute; left: -1.85rem; top: 0; width: 2rem; height: 2rem; border-radius: 50%; background: var(--arte-blue); display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; color: #fff;">01</span>
+          </div>
+          <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.4rem;">Listen</h3>
+          <p style="font-size: 0.8rem; line-height: 1.7; color: var(--arte-mid);">Meet the developer and designer. Understand the brief, budget, timeline, and standard expected. No assumptions.</p>
+        </div>
+
+        <div style="position: relative; margin-bottom: 2.25rem;">
+          <div style="position: absolute; left: -1.85rem; top: 0; width: 2rem; height: 2rem; border-radius: 50%; background: #fff; border: 1.5px solid var(--arte-blue); display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; color: var(--arte-blue);">02</span>
+          </div>
+          <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.4rem;">Plan</h3>
+          <p style="font-size: 0.8rem; line-height: 1.7; color: var(--arte-mid);">Translate design intent into a production plan. Drawings reviewed, materials sourced, samples approved before we cut a single piece.</p>
+        </div>
+
+        <div style="position: relative; margin-bottom: 2.25rem;">
+          <div style="position: absolute; left: -1.85rem; top: 0; width: 2rem; height: 2rem; border-radius: 50%; background: #fff; border: 1.5px solid var(--arte-blue); display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; color: var(--arte-blue);">03</span>
+          </div>
+          <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.4rem;">Make</h3>
+          <p style="font-size: 0.8rem; line-height: 1.7; color: var(--arte-mid);">Skilled craftspeople, tight QA at every stage, regular updates back to the design and project team.</p>
+        </div>
+
+        <div style="position: relative; margin-bottom: 2.25rem;">
+          <div style="position: absolute; left: -1.85rem; top: 0; width: 2rem; height: 2rem; border-radius: 50%; background: #fff; border: 1.5px solid var(--arte-blue); display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; color: var(--arte-blue);">04</span>
+          </div>
+          <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.4rem;">Deliver</h3>
+          <p style="font-size: 0.8rem; line-height: 1.7; color: var(--arte-mid);">Packing, shipping, customs, schedule — we handle the logistics. Wherever the site, the pieces arrive ready to install.</p>
+        </div>
+
+        <div style="position: relative;">
+          <div style="position: absolute; left: -1.85rem; top: 0; width: 2rem; height: 2rem; border-radius: 50%; background: #fff; border: 1.5px solid var(--arte-blue); display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; color: var(--arte-blue);">05</span>
+          </div>
+          <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.4rem;">Install</h3>
+          <p style="font-size: 0.8rem; line-height: 1.7; color: var(--arte-mid);">Our local team joins yours on the ground. Phased installation, snagging resolved. Handover only when you are satisfied.</p>
+        </div>
+
       </div>
-      
-      <div class="fade-in">
-        <div class="process-step-num mb-4">03</div>
-        <div class="arte-divider mb-4"></div>
-        <h3 class="heading-serif text-xl mb-3">Production &<br>QA</h3>
-        <p class="text-xs leading-relaxed" style="color: var(--arte-mid);">Manufactured in our vetted partner facilities with rigorous quality assurance at every stage. Samples approved before full production.</p>
-      </div>
-      
-      <div class="fade-in">
-        <div class="process-step-num mb-4">04</div>
-        <div class="arte-divider mb-4"></div>
-        <h3 class="heading-serif text-xl mb-3">Delivery &<br>Installation</h3>
-        <p class="text-xs leading-relaxed" style="color: var(--arte-mid);">White-glove logistics, phased installation, snagging resolution. We're not done until you're satisfied.</p>
-      </div>
-      
+    </div>
+
+    <!-- Closing quote -->
+    <div class="fade-in" style="max-width: 680px; margin: 0 auto; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(123,142,185,0.2);">
+      <p class="heading-serif" style="font-size: clamp(1rem, 1.8vw, 1.25rem); color: var(--arte-charcoal); font-style: italic; line-height: 1.7;">
+        "We don't just build furniture. We carry the project —<br>from the first conversation to the day the doors open."
+      </p>
     </div>
     
   </div>
