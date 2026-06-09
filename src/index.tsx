@@ -556,7 +556,7 @@ ${navHTML('home')}
         a Story
       </h1>
       <p class="text-sm leading-relaxed mb-10" style="color: rgba(255,255,255,0.7); max-width: 420px; font-weight: 300;">
-        We partner with the world's leading hospitality groups, developers, and institutions to create furniture that defines extraordinary environments — from Mandarin Oriental-calibre hotels to contemporary student residences.
+        From five-star hotel groups to a family designing their forever home, we partner with people who care deeply about the places they create. Developers, hospitality leaders, institutions, homeowners — different briefs, one shared standard. Furniture made to last, made to be lived with, made to feel like it always belonged there.
       </p>
       <div class="flex flex-wrap gap-4">
         <a href="/projects" class="btn-primary">
