@@ -1173,7 +1173,7 @@ ${navHTML('about')}
             <span style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: #fff; font-weight: 500; letter-spacing: 0.05em;">01</span>
           </div>
           <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.75rem;">Listen</h3>
-          <p style="font-size: 0.78rem; line-height: 1.7; color: var(--arte-mid); max-width: 140px;">Meet the developer and designer. Understand the brief, budget, timeline, and standard expected. No assumptions.</p>
+          <p style="font-size: 0.78rem; line-height: 1.7; color: var(--arte-mid); max-width: 140px;">Meet the property owner and designer. Understand the brief, budget, timeline, and standard expected. No assumptions.</p>
         </div>
 
         <!-- Arrow -->
@@ -1239,7 +1239,7 @@ ${navHTML('about')}
             <span style="font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; color: #fff;">01</span>
           </div>
           <h3 style="font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--arte-charcoal); margin-bottom: 0.4rem;">Listen</h3>
-          <p style="font-size: 0.8rem; line-height: 1.7; color: var(--arte-mid);">Meet the developer and designer. Understand the brief, budget, timeline, and standard expected. No assumptions.</p>
+          <p style="font-size: 0.8rem; line-height: 1.7; color: var(--arte-mid);">Meet the property owner and designer. Understand the brief, budget, timeline, and standard expected. No assumptions.</p>
         </div>
 
         <div style="position: relative; margin-bottom: 2.25rem;">
