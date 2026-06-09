@@ -1077,8 +1077,8 @@ ${navHTML('about')}
           <div style="position: absolute; left: 0; top: 0; width: 4px; height: 100%; background: var(--arte-blue);"></div>
         </div>
         <div style="position: absolute; bottom: -1.5rem; right: 0; background: var(--arte-charcoal); padding: 1.5rem 2rem;">
-          <p class="section-label" style="color: var(--arte-blue); margin-bottom: 0.25rem;">Our Approach</p>
-          <p class="heading-serif text-white" style="font-size: 1.1rem;">Design with<br><em>Intent</em></p>
+          <p class="section-label" style="color: var(--arte-blue); margin-bottom: 0.25rem;">Our Craft</p>
+          <p class="heading-serif text-white" style="font-size: 1.1rem;">Built to<br><em>Deliver</em></p>
         </div>
       </div>
       
