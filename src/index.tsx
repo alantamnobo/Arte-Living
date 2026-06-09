@@ -1333,24 +1333,7 @@ function projectsPage() {
       scope: '850 study bedrooms + communal',
       img: 'https://sspark.genspark.ai/cfimages?u1=%2FqBTjNtnJ%2Bsc5V15aESGpO03%2Bal3R8Pz%2FqAEXJgze9PIlbvIhziSn6ftuEI3FUxME5w4G%2Bqk0XjRgy1i0iEzzGZK%2Bvb68zJyMc%2BLef3q6Q%3D%3D&u2=1IflmvVyVUdkhOJo&width=2560',
     },
-    {
-      title: 'Maison Lumière',
-      location: 'Kuala Lumpur, Malaysia',
-      locationKey: 'malaysia',
-      sector: 'Serviced Apartments',
-      tier: '5-Star Grade',
-      scope: '140 fully furnished apartments',
-      img: 'https://sspark.genspark.ai/cfimages?u1=vDoYq9DYLf7TZ5SaO4Aa0Dj%2FOy3Bw6lRMl029trWMCmKXrTgKLWze7RiY%2FcPv2RF4mBD3s63%2FeLwra464hccrayfsNfq6GBQJWmoVNTz1tUw0sX65aEOlAbyfVcZSkx10zcrcW46qwy83IQl9%2FvWnhr6wrBr8l4%3D&u2=vqoHJXUlMlIYOvnm&width=2560',
-    },
-    {
-      title: 'Sunrise Wellbeing Village',
-      location: 'Vancouver, Canada',
-      locationKey: 'canada',
-      sector: 'Senior Living',
-      tier: 'Premium Care Spec',
-      scope: '200 apartments + communal spaces',
-      img: 'https://sspark.genspark.ai/cfimages?u1=lk3ATvy9Xa9%2BG2POrLF%2BbhrI3CjI%2B1OA9qEfby40Fqg1%2F2HSe5korg84vVDhaiZgZVCTDbnNbVxlsLRdyScursV38C8zl%2BbbboHJsKz9m4C33cPveEGfnq%2BiS%2FGPtj2uJowcoppGrURXd7xdkwU5Vppt4QrL0Bfaw6QkF2vxwnEXaH4%3D&u2=Y5nU771aqxuMMOEQ&width=2560',
-    },
+
 
     {
       title: 'Harbour View Executive Suite',
