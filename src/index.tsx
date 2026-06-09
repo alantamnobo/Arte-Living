@@ -1091,27 +1091,39 @@ ${navHTML('about')}
 
         <hr style="border: none; border-top: 1px solid #e0dbd4; margin-bottom: 1.75rem;" />
 
-        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
 
-          <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
-            We are, at heart, a furniture manufacturer. Design is part of what we do, but our real craft is turning our clients' designs into reality — built with precision, finished with care, delivered on time.
-          </p>
+          <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+            <div style="width: 2px; background: var(--arte-blue); flex-shrink: 0; margin-top: 0.3rem; height: 3rem;"></div>
+            <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
+              We are, at heart, a furniture manufacturer. Design is part of what we do, but our real craft is turning our clients' designs into reality — built with precision, finished with care, delivered on time.
+            </p>
+          </div>
 
-          <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
-            Behind every piece is a factory, a team, and decades of know-how. Skilled people who take pride in their work. Engineers and project managers who understand that a great product is only half the promise — the other half is execution.
-          </p>
+          <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+            <div style="width: 2px; background: var(--arte-blue); flex-shrink: 0; margin-top: 0.3rem; height: 3rem;"></div>
+            <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
+              Behind every piece is a factory, a team, and decades of know-how. Skilled people who take pride in their work. Engineers and project managers who understand that a great product is only half the promise — the other half is execution.
+            </p>
+          </div>
 
-          <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
-            That's where we stand apart. We don't just produce furniture. We deliver projects. Large, complex, multi-site projects — across cities, across continents — completed on schedule and to specification. From the first prototype to the final installation, we manage every stage so our clients don't have to worry.
-          </p>
+          <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+            <div style="width: 2px; background: var(--arte-blue); flex-shrink: 0; margin-top: 0.3rem; height: 3rem;"></div>
+            <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
+              That's where we stand apart. We don't just produce furniture. We deliver projects. Large, complex, multi-site projects — across cities, across continents — completed on schedule and to specification. From the first prototype to the final installation, we manage every stage so our clients don't have to worry.
+            </p>
+          </div>
 
-          <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
-            Wherever the project is in the world, we are ready. Same standards. Same discipline. Same result.
-          </p>
+          <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+            <div style="width: 2px; background: var(--arte-blue); flex-shrink: 0; margin-top: 0.3rem; height: 3rem;"></div>
+            <p style="font-size: 0.95rem; line-height: 1.85; color: var(--arte-charcoal);">
+              Wherever the project is in the world, we are ready. Same standards. Same discipline. Same result.
+            </p>
+          </div>
 
         </div>
 
-        <div style="margin-top: 1.75rem; padding-left: 1.25rem; border-left: 3px solid var(--arte-charcoal);">
+        <div style="margin-top: 1.75rem; padding: 1.5rem 1.5rem; border-left: 3px solid var(--arte-blue); background: var(--arte-cream);">
           <p style="font-size: 0.95rem; line-height: 1.75; color: var(--arte-charcoal); font-style: italic;">
             "A beautiful design deserves a flawless build. Our job is to make sure it arrives — on time, on spec, and exactly as imagined."
           </p>
