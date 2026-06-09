@@ -1292,9 +1292,9 @@ ${navHTML('about')}
 ══════════════════════════════════════════════ -->
 <section class="py-20" style="background: var(--arte-blue);">
   <div class="max-w-7xl mx-auto px-8 text-center fade-in">
-    <p class="text-xs tracking-widest uppercase mb-4" style="color: rgba(255,255,255,0.6);">Trusted by Leading Operators</p>
+    <p class="text-xs tracking-widest uppercase mb-4" style="color: rgba(255,255,255,0.6);">From Property Owners to Designers — Trusted by Our Partners</p>
     <h2 class="heading-serif text-white mb-8" style="font-size: clamp(2rem, 3.5vw, 3rem);">
-      Ready to Discuss Your Next Project?
+      Let's Build Something Together
     </h2>
     <a href="/contact" class="btn-outline-white">
       Get In Touch <i class="fas fa-arrow-right text-xs"></i>
