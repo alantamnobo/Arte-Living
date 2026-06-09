@@ -1316,15 +1316,7 @@ function projectsPage() {
       scope: '320 bedrooms, lobby, F&B areas',
       img: 'https://sspark.genspark.ai/cfimages?u1=AaAgbX1DdalH6YaJ%2BJS51XAx5nKb4ygbX7J8lAVYQcJxpZgMHd6Cdio0cAo%2B2Pg29JNaBnAzjpX5DrclcO60bmijR45XCPv7CPMrOrP%2F3ghO7fmFf6YMF%2FBD1zmUjJrc6e27zF2C9EvNxWR0HnY%2BEzLXqG6yesKF%2Fw%3D%3D&u2=zkxm1jJH7xMOgwyG&width=2560',
     },
-    {
-      title: 'Apex Capital HQ',
-      location: 'Hong Kong',
-      locationKey: 'hk',
-      sector: 'Corporate Office',
-      tier: 'Premium Office',
-      scope: '12 floors, boardrooms, breakout zones',
-      img: 'https://sspark.genspark.ai/cfimages?u1=D%2BjO5IRrFzm726ACprdTAD3Ji8aoDy8%2F61TyTm56CcsP%2Byxh26ySw0E0j4%2B%2BKPw7HwWRznR%2BxZxGcb8ThRERqQXg3%2B43mG9GIVhps%2B9Hzsv0cLDezUQIugPS0tfUm243z3lPT4vARbjIG8Ey77ifQ1LKzGXyTw%3D%3D&u2=C9Sq6Z2fByU1MvH4&width=2560',
-    },
+
     {
       title: 'Collegiate Quarter',
       location: 'Manchester, UK',
@@ -1352,15 +1344,7 @@ function projectsPage() {
       scope: '200 apartments + communal spaces',
       img: 'https://sspark.genspark.ai/cfimages?u1=lk3ATvy9Xa9%2BG2POrLF%2BbhrI3CjI%2B1OA9qEfby40Fqg1%2F2HSe5korg84vVDhaiZgZVCTDbnNbVxlsLRdyScursV38C8zl%2BbbboHJsKz9m4C33cPveEGfnq%2BiS%2FGPtj2uJowcoppGrURXd7xdkwU5Vppt4QrL0Bfaw6QkF2vxwnEXaH4%3D&u2=Y5nU771aqxuMMOEQ&width=2560',
     },
-    {
-      title: 'Nexus Tower Offices',
-      location: 'Shenzhen, China',
-      locationKey: 'china',
-      sector: 'Corporate Office',
-      tier: 'Premium Office',
-      scope: 'Reception, 8 floors, executive suites',
-      img: 'https://sspark.genspark.ai/cfimages?u1=pkixtz9WrUjaXNozkNCiMeVnX5benImBVXkoNjHbYGxT40qI8nY%2BfkDnfHFzHvgS8vRFfAvXgXwMgEnkbGf6iOr44giO2Pod0MNEaaduTNOH%2BXQUQ%2Bvxl5G2gReiCxM726AzujjdWg%3D%3D&u2=rhk3XtGlu285nbvX&width=2560',
-    },
+
     {
       title: 'Harbour View Executive Suite',
       location: 'Hong Kong',
