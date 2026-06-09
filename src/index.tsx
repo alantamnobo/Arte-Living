@@ -1368,7 +1368,7 @@ function projectsPage() {
       sector: 'Corporate Office',
       tier: 'Premium Office',
       scope: 'Executive suite, meeting rooms & lounge',
-      img: 'https://www.genspark.ai/api/files/s/FveZLY8q',
+      img: '/static/FveZLY8q.jpg',
     },
   ]
 
