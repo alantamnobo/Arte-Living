@@ -17,6 +17,13 @@ app.get('/projects', (c) => {
   return c.html(projectsPage())
 })
 
+app.get('/projects/:slug', (c) => {
+  const slug = c.req.param('slug')
+  const page = projectDetailPage(slug)
+  if (!page) return c.html(projectsPage())
+  return c.html(page)
+})
+
 app.get('/contact', (c) => {
   return c.html(contactPage())
 })
@@ -1351,8 +1358,17 @@ function projectsPage() {
       locationKey: 'hk',
       sector: 'Corporate Office',
       tier: 'Premium Office',
-      scope: 'Executive suite, meeting rooms & lounge',
+      scope: 'Executive suite, boardroom, lounge & open-plan floors',
+      slug: 'harbour-view-executive-suite',
       img: '/static/FveZLY8q.jpg',
+      gallery: [
+        { src: '/static/FveZLY8q.jpg', caption: 'Executive Office — Victoria Harbour view' },
+        { src: '/static/hk-office-boardroom.jpg', caption: 'Boardroom — 12-seat conference table, harbour aspect' },
+        { src: '/static/hk-office-exec-room.jpg', caption: 'Director\'s Office — bespoke desk & executive seating' },
+        { src: '/static/hk-office-bar.jpg', caption: 'Hospitality Bar — walnut joinery, marble countertop' },
+        { src: '/static/hk-office-lounge.jpg', caption: 'Client Lounge — panoramic harbour & skyline views' },
+        { src: '/static/hk-office-openplan.jpg', caption: 'Open-Plan Working Floor — full workstation fit-out' },
+      ],
     },
   ]
 
@@ -1367,14 +1383,20 @@ function projectsPage() {
   const cards = projects.map((p, i) => {
     const sectorKey = sectorMap[p.sector] || 'other'
     const locKey = (p as any).locationKey || 'other'
+    const slug = (p as any).slug
+    const hasDetail = !!slug
+    const cardTag = hasDetail ? `a href="/projects/${slug}"` : 'div'
+    const closeTag = hasDetail ? 'a' : 'div'
     return `
     <article class="project-card fade-in" data-sector="${sectorKey}" data-location="${locKey}" style="animation-delay: ${i * 0.1}s;">
+      <${cardTag} style="display:block; text-decoration:none; color:inherit;">
       <div class="aspect-4-3 overflow-hidden relative">
         <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover">
         <div class="project-overlay"></div>
         <div class="absolute top-4 left-4 z-10">
           <span class="text-xs px-3 py-1 tracking-wider uppercase" style="background: rgba(123,142,185,0.85); color: #fff; font-size: 0.6rem; letter-spacing: 0.2em;">${p.sector}</span>
         </div>
+        ${hasDetail ? `<div class="absolute bottom-4 right-4 z-10" style="background: rgba(0,0,0,0.45); padding: 0.35rem 0.75rem; display:flex; align-items:center; gap:0.4rem;"><span style="font-size:0.6rem; letter-spacing:0.15em; color:#fff; text-transform:uppercase;">View Project</span><span style="color:#fff; font-size:0.75rem;">→</span></div>` : ''}
       </div>
       <div class="p-6" style="background: #fff; border: 1px solid #E8E4DF; border-top: none;">
         <div class="arte-divider mb-4"></div>
@@ -1387,6 +1409,7 @@ function projectsPage() {
         </div>
         <p class="text-xs" style="color: #6B6B6B;">${p.scope}</p>
       </div>
+      </${closeTag}>
     </article>
   `
   }).join('')
@@ -1520,6 +1543,281 @@ function setLocation(filter) {
   });
   applyFilters();
 }
+</script>
+
+${footerHTML()}`
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PROJECT DETAIL PAGE
+// ─────────────────────────────────────────────────────────────────────────────
+
+const projectDetailData: Record<string, {
+  title: string
+  location: string
+  sector: string
+  tier: string
+  scope: string
+  year?: string
+  description: string
+  gallery: { src: string; caption: string }[]
+}> = {
+  'harbour-view-executive-suite': {
+    title: 'Harbour View Executive Suite',
+    location: 'Hong Kong',
+    sector: 'Corporate Office',
+    tier: 'Premium Office',
+    scope: 'Executive suite, boardroom, lounge & open-plan floors',
+    year: '2024',
+    description: `A landmark office fit-out occupying a high floor in one of Hong Kong's most prestigious commercial towers, with uninterrupted views across Victoria Harbour. ARTé was engaged to deliver the complete furniture and joinery package — from the executive suite and private director offices, through the 12-seat boardroom and hospitality bar, to the open-plan working floors.
+
+Every piece was designed and manufactured to brief: bespoke executive desks finished in stone grey lacquer, hand-stitched leather executive seating, walnut joinery throughout the bar and reception walls, and a marble-topped hospitality counter. The boardroom table — solid walnut with integrated cable management — seats twelve, anchored by leather-and-timber chairs matched to the harbour-facing window wall.
+
+The result is an environment that projects authority and confidence while remaining genuinely comfortable for the people who work in it every day.`,
+    gallery: [
+      { src: '/static/hk-office-cover.jpg', caption: 'Executive Office — Victoria Harbour view' },
+      { src: '/static/hk-office-boardroom.jpg', caption: 'Boardroom — 12-seat conference table, harbour aspect' },
+      { src: '/static/hk-office-exec-room.jpg', caption: "Director's Office — bespoke desk & executive seating" },
+      { src: '/static/hk-office-bar.jpg', caption: 'Hospitality Bar — walnut joinery, marble countertop' },
+      { src: '/static/hk-office-lounge.jpg', caption: 'Client Lounge — panoramic harbour & skyline views' },
+      { src: '/static/hk-office-openplan.jpg', caption: 'Open-Plan Working Floor — full workstation fit-out' },
+    ],
+  },
+}
+
+function projectDetailPage(slug: string): string | null {
+  const project = projectDetailData[slug]
+  if (!project) return null
+
+  const { title, location, sector, tier, scope, year, description, gallery } = project
+  const coverImg = gallery[0]?.src ?? ''
+
+  // Build gallery grid HTML
+  const galleryItems = gallery.map((item, i) => `
+    <figure class="gallery-item fade-in" style="animation-delay: ${0.1 + i * 0.08}s; cursor:pointer;" onclick="openLightbox(${i})">
+      <div class="gallery-img-wrap" style="aspect-ratio:4/3; overflow:hidden; position:relative;">
+        <img src="${item.src}" alt="${item.caption}"
+             style="width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease;"
+             class="gallery-img">
+        <div class="gallery-overlay" style="position:absolute; inset:0; background:rgba(44,44,44,0); transition:background 0.3s ease; display:flex; align-items:flex-end; padding:1rem;">
+          <span class="overlay-caption" style="font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; color:#fff; opacity:0; transition:opacity 0.3s ease; font-family:'Inter',sans-serif;">${item.caption}</span>
+        </div>
+      </div>
+      <figcaption style="padding: 0.75rem 0 0; font-size:0.7rem; color:#6B6B6B; letter-spacing:0.05em; font-family:'Inter',sans-serif;">${item.caption}</figcaption>
+    </figure>
+  `).join('')
+
+  // Lightbox slides
+  const lightboxSlides = gallery.map((item, i) => `
+    <div class="lb-slide" id="lb-slide-${i}" style="display:${i === 0 ? 'flex' : 'none'}; flex-direction:column; align-items:center; justify-content:center; height:100%;">
+      <img src="${item.src}" alt="${item.caption}" style="max-height:80vh; max-width:90vw; object-fit:contain;">
+      <p style="margin-top:1rem; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.7); font-family:'Inter',sans-serif;">${item.caption}</p>
+    </div>
+  `).join('')
+
+  return headHTML(title, `${title} — ${sector} project in ${location} by ARTé. ${scope}.`) + `
+
+${navHTML('projects')}
+
+<!-- ══════════════════════════════════════════════
+     BACK LINK
+══════════════════════════════════════════════ -->
+<div style="background: var(--arte-warm); padding-top: 6rem; padding-bottom: 1.25rem;">
+  <div class="max-w-7xl mx-auto px-8">
+    <a href="/projects" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--arte-blue); text-decoration:none; font-family:'Inter',sans-serif; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+      <span style="font-size:0.8rem;">←</span> All Projects
+    </a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     PROJECT HERO — COVER + TITLE
+══════════════════════════════════════════════ -->
+<section style="background: var(--arte-warm); padding-bottom: 0; overflow:hidden;">
+  <!-- Cover image — full bleed -->
+  <div style="width:100%; height: clamp(320px, 55vw, 680px); overflow:hidden; position:relative;">
+    <img src="${coverImg}" alt="${title}"
+         style="width:100%; height:100%; object-fit:cover; object-position:center;">
+    <div style="position:absolute; inset:0; background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%);"></div>
+    <!-- Title overlay on hero -->
+    <div style="position:absolute; bottom:0; left:0; right:0; padding: clamp(2rem,5vw,4rem) clamp(1.5rem,5vw,5rem);">
+      <span style="font-size:0.6rem; letter-spacing:0.25em; text-transform:uppercase; color:rgba(255,255,255,0.7); font-family:'Inter',sans-serif;">${sector}</span>
+      <h1 class="heading-serif" style="font-size: clamp(2rem,5vw,4rem); color:#fff; margin-top:0.4rem; line-height:1.1; text-shadow: 0 2px 20px rgba(0,0,0,0.3);">${title}</h1>
+      <p style="font-size:0.75rem; color:rgba(255,255,255,0.75); margin-top:0.6rem; font-family:'Inter',sans-serif; letter-spacing:0.05em;">
+        <i class="fas fa-map-marker-alt" style="margin-right:0.4rem; color:#A8B5D1;"></i>${location}
+        ${year ? `<span style="margin:0 0.75rem; opacity:0.4;">|</span><i class="fas fa-calendar-alt" style="margin-right:0.4rem; color:#A8B5D1;"></i>${year}` : ''}
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     PROJECT INFO + DESCRIPTION
+══════════════════════════════════════════════ -->
+<section style="background: #fff; padding: clamp(3rem,6vw,6rem) 0;">
+  <div class="max-w-7xl mx-auto px-8">
+    <div style="display:grid; grid-template-columns: 1fr; gap: 3rem;" class="md-grid-2col">
+      
+      <!-- Description -->
+      <div style="max-width: 660px;">
+        <p class="section-label mb-5">Project Overview</p>
+        <div style="border-left: 3px solid var(--arte-blue); padding-left: 1.5rem; margin-bottom: 2rem;">
+          <p class="text-sm leading-relaxed" style="color: var(--arte-mid); white-space: pre-line;">${description}</p>
+        </div>
+      </div>
+
+      <!-- Specs sidebar -->
+      <aside style="background: var(--arte-warm); padding: 2rem 2.5rem; align-self:start; border: 1px solid var(--arte-border);">
+        <p class="section-label mb-5">Project Specifications</p>
+        <div style="display:flex; flex-direction:column; gap:1.4rem;">
+          <div>
+            <p style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--arte-blue); margin-bottom:0.35rem; font-family:'Inter',sans-serif;">Sector</p>
+            <p class="text-sm" style="color:var(--arte-charcoal);">${sector}</p>
+          </div>
+          <div>
+            <p style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--arte-blue); margin-bottom:0.35rem; font-family:'Inter',sans-serif;">Specification Tier</p>
+            <p class="text-sm" style="color:var(--arte-charcoal);">${tier}</p>
+          </div>
+          <div>
+            <p style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--arte-blue); margin-bottom:0.35rem; font-family:'Inter',sans-serif;">Location</p>
+            <p class="text-sm" style="color:var(--arte-charcoal);">${location}</p>
+          </div>
+          ${year ? `<div>
+            <p style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--arte-blue); margin-bottom:0.35rem; font-family:'Inter',sans-serif;">Year</p>
+            <p class="text-sm" style="color:var(--arte-charcoal);">${year}</p>
+          </div>` : ''}
+          <div>
+            <p style="font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--arte-blue); margin-bottom:0.35rem; font-family:'Inter',sans-serif;">Scope of Work</p>
+            <p class="text-sm" style="color:var(--arte-charcoal);">${scope}</p>
+          </div>
+          <div style="padding-top:1rem; border-top: 1px solid var(--arte-border);">
+            <a href="/contact" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:#fff; background:var(--arte-blue); padding:0.75rem 1.5rem; text-decoration:none; transition:opacity 0.2s; font-family:'Inter',sans-serif;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+              Discuss a Similar Project <span>→</span>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     PHOTO GALLERY
+══════════════════════════════════════════════ -->
+<section style="background: var(--arte-cream); padding: clamp(3rem,6vw,6rem) 0;">
+  <div class="max-w-7xl mx-auto px-8">
+    <p class="section-label mb-3 fade-in">Photo Gallery</p>
+    <h2 class="heading-serif mb-10 fade-in" style="font-size: clamp(1.8rem,3vw,2.8rem); color: var(--arte-charcoal);">
+      The Full Picture
+    </h2>
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 1.5rem;">
+      ${galleryItems}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     CTA BANNER
+══════════════════════════════════════════════ -->
+<section style="background: var(--arte-charcoal); padding: clamp(3rem,6vw,5rem) 0;">
+  <div class="max-w-7xl mx-auto px-8 text-center">
+    <p class="section-label mb-4 fade-in" style="color: rgba(255,255,255,0.5);">Work With ARTé</p>
+    <h2 class="heading-serif mb-6 fade-in" style="font-size: clamp(1.8rem,3vw,3rem); color: #fff;">
+      Ready to Brief Us on Your Project?
+    </h2>
+    <p class="text-sm mb-8 fade-in" style="color: rgba(255,255,255,0.65); max-width:480px; margin-left:auto; margin-right:auto; line-height:1.8;">
+      From concept to installation — tell us what you're building and we'll tell you how we can make it exceptional.
+    </p>
+    <div class="fade-in" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a href="/contact" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--arte-charcoal); background:#fff; padding:1rem 2.5rem; text-decoration:none; font-family:'Inter',sans-serif; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+        Start a Conversation →
+      </a>
+      <a href="/projects" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.8); border:1px solid rgba(255,255,255,0.3); padding:1rem 2.5rem; text-decoration:none; font-family:'Inter',sans-serif; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+        ← All Projects
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     LIGHTBOX
+══════════════════════════════════════════════ -->
+<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:1000; align-items:center; justify-content:center;">
+  <button onclick="closeLightbox()" style="position:absolute; top:1.5rem; right:2rem; background:none; border:none; color:#fff; font-size:2rem; cursor:pointer; opacity:0.7; line-height:1;" aria-label="Close">&times;</button>
+  <button onclick="prevSlide()" style="position:absolute; left:1.5rem; top:50%; transform:translateY(-50%); background:none; border:none; color:#fff; font-size:2rem; cursor:pointer; opacity:0.6; padding:1rem;" aria-label="Previous">&#8249;</button>
+  <button onclick="nextSlide()" style="position:absolute; right:1.5rem; top:50%; transform:translateY(-50%); background:none; border:none; color:#fff; font-size:2rem; cursor:pointer; opacity:0.6; padding:1rem;" aria-label="Next">&#8250;</button>
+  <div style="width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:4rem 5rem;">
+    ${lightboxSlides}
+  </div>
+  <div id="lb-counter" style="position:absolute; bottom:1.5rem; left:50%; transform:translateX(-50%); font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.5); font-family:'Inter',sans-serif;">1 / ${gallery.length}</div>
+</div>
+
+<style>
+  .gallery-item:hover .gallery-img { transform: scale(1.04); }
+  .gallery-item:hover .gallery-overlay { background: rgba(44,44,44,0.35) !important; }
+  .gallery-item:hover .overlay-caption { opacity: 1 !important; }
+  @media (min-width: 768px) {
+    .md-grid-2col { grid-template-columns: 1fr 360px !important; }
+  }
+</style>
+
+<script>
+  // ── Lightbox ──
+  let currentSlide = 0;
+  const totalSlides = ${gallery.length};
+  function openLightbox(idx) {
+    currentSlide = idx;
+    showSlide(currentSlide);
+    document.getElementById('lightbox').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  function showSlide(idx) {
+    for (let i = 0; i < totalSlides; i++) {
+      const el = document.getElementById('lb-slide-' + i);
+      if (el) el.style.display = i === idx ? 'flex' : 'none';
+    }
+    document.getElementById('lb-counter').textContent = (idx + 1) + ' / ' + totalSlides;
+  }
+  function nextSlide() { currentSlide = (currentSlide + 1) % totalSlides; showSlide(currentSlide); }
+  function prevSlide() { currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; showSlide(currentSlide); }
+  document.addEventListener('keydown', e => {
+    const lb = document.getElementById('lightbox');
+    if (lb && lb.style.display !== 'none') {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'Escape') closeLightbox();
+    }
+  });
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+
+  // ── Fade-in on scroll ──
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); }
+    });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => obs.observe(el));
+
+  // ── Nav scroll ──
+  const detailNav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      detailNav.style.background = 'rgba(255,255,255,0.97)';
+      detailNav.style.borderBottom = '1px solid #E8E4DF';
+      detailNav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.06)';
+    } else {
+      detailNav.style.background = 'transparent';
+      detailNav.style.borderBottom = 'none';
+      detailNav.style.boxShadow = 'none';
+    }
+  });
 </script>
 
 ${footerHTML()}`
