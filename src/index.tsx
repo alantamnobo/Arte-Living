@@ -1568,7 +1568,7 @@ const projectDetailData: Record<string, {
     sector: 'Corporate Office',
     tier: 'Premium Office',
     scope: 'Executive suite, boardroom, lounge & open-plan floors',
-    year: '2024',
+    year: '2025',
     description: `A landmark office fit-out occupying a high floor in one of Hong Kong's most prestigious commercial towers, with uninterrupted views across Victoria Harbour. ARTé was engaged to deliver the complete furniture and joinery package — from the executive suite and private director offices, through the 12-seat boardroom and hospitality bar, to the open-plan working floors.
 
 Every piece was designed and manufactured to brief: bespoke executive desks finished in stone grey lacquer, hand-stitched leather executive seating, walnut joinery throughout the bar and reception walls, and a marble-topped hospitality counter. The boardroom table — solid walnut with integrated cable management — seats twelve, anchored by leather-and-timber chairs matched to the harbour-facing window wall.
