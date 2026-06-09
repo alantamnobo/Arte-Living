@@ -1310,6 +1310,7 @@ function projectsPage() {
     {
       title: 'The Meridian Grand',
       location: 'London, UK',
+      locationKey: 'uk',
       sector: 'Luxury Hotel',
       tier: '5-Star Grade',
       scope: '320 bedrooms, lobby, F&B areas',
@@ -1317,7 +1318,8 @@ function projectsPage() {
     },
     {
       title: 'Apex Capital HQ',
-      location: 'Singapore',
+      location: 'Hong Kong',
+      locationKey: 'hk',
       sector: 'Corporate Office',
       tier: 'Premium Office',
       scope: '12 floors, boardrooms, breakout zones',
@@ -1326,6 +1328,7 @@ function projectsPage() {
     {
       title: 'Collegiate Quarter',
       location: 'Manchester, UK',
+      locationKey: 'uk',
       sector: 'Student Housing',
       tier: 'Value Specification',
       scope: '850 study bedrooms + communal',
@@ -1333,7 +1336,8 @@ function projectsPage() {
     },
     {
       title: 'Maison Lumière',
-      location: 'Paris, France',
+      location: 'Kuala Lumpur, Malaysia',
+      locationKey: 'malaysia',
       sector: 'Serviced Apartments',
       tier: '5-Star Grade',
       scope: '140 fully furnished apartments',
@@ -1341,7 +1345,8 @@ function projectsPage() {
     },
     {
       title: 'Sunrise Wellbeing Village',
-      location: 'Surrey, UK',
+      location: 'Vancouver, Canada',
+      locationKey: 'canada',
       sector: 'Senior Living',
       tier: 'Premium Care Spec',
       scope: '200 apartments + communal spaces',
@@ -1349,7 +1354,8 @@ function projectsPage() {
     },
     {
       title: 'Nexus Tower Offices',
-      location: 'Dubai, UAE',
+      location: 'Shenzhen, China',
+      locationKey: 'china',
       sector: 'Corporate Office',
       tier: 'Premium Office',
       scope: 'Reception, 8 floors, executive suites',
@@ -1367,8 +1373,9 @@ function projectsPage() {
 
   const cards = projects.map((p, i) => {
     const sectorKey = sectorMap[p.sector] || 'other'
+    const locKey = (p as any).locationKey || 'other'
     return `
-    <article class="project-card fade-in" data-sector="${sectorKey}" style="animation-delay: ${i * 0.1}s;">
+    <article class="project-card fade-in" data-sector="${sectorKey}" data-location="${locKey}" style="animation-delay: ${i * 0.1}s;">
       <div class="aspect-4-3 overflow-hidden relative">
         <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover">
         <div class="project-overlay"></div>
@@ -1406,7 +1413,7 @@ ${navHTML('projects')}
         Projects That<br><em style="color: var(--arte-blue);">Speak for Themselves</em>
       </h1>
       <p class="text-sm leading-relaxed fade-in" style="color: var(--arte-mid); max-width: 480px;">
-        Over 200 projects across luxury hospitality, commercial, residential and social sectors. Each one a testament to the power of considered design.
+        A selection of our work across luxury hospitality, commercial, residential and social sectors — spanning multiple continents. Each project shown is one of many; the full portfolio runs far wider.
       </p>
     </div>
   </div>
@@ -1416,14 +1423,27 @@ ${navHTML('projects')}
      FILTER BAR
 ══════════════════════════════════════════════ -->
 <section style="background: #FAF9F7; border-bottom: 1px solid #E8E4DF;" class="sticky top-[72px] z-40">
-  <div class="max-w-7xl mx-auto px-8 py-4">
-    <div class="flex flex-wrap gap-3 items-center">
-      <span class="text-xs tracking-widest uppercase mr-2" style="color: #6B6B6B;">Filter:</span>
-      <button onclick="filterProjects('all')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-active" data-filter="all">All</button>
-      <button onclick="filterProjects('hotel')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-filter="hotel">Hotels</button>
-      <button onclick="filterProjects('office')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-filter="office">Offices</button>
-      <button onclick="filterProjects('residential')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-filter="residential">Residential</button>
-      <button onclick="filterProjects('student')" class="filter-btn text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-filter="student">Student</button>
+  <div class="max-w-7xl mx-auto px-8 pt-4 pb-3">
+    <!-- Sector row -->
+    <div class="flex flex-wrap gap-3 items-center mb-3">
+      <span class="text-xs tracking-widest uppercase" style="color: #6B6B6B; min-width: 4.5rem;">Sector:</span>
+      <button onclick="setSector('all')" class="filter-btn filter-sector text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-active" data-sector-filter="all">All</button>
+      <button onclick="setSector('hotel')" class="filter-btn filter-sector text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-sector-filter="hotel">Hotels</button>
+      <button onclick="setSector('office')" class="filter-btn filter-sector text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-sector-filter="office">Offices</button>
+      <button onclick="setSector('residential')" class="filter-btn filter-sector text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-sector-filter="residential">Residential</button>
+      <button onclick="setSector('student')" class="filter-btn filter-sector text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-sector-filter="student">Student</button>
+    </div>
+    <!-- Divider -->
+    <div style="height: 1px; background: #E8E4DF; margin-bottom: 0.65rem;"></div>
+    <!-- Location row -->
+    <div class="flex flex-wrap gap-3 items-center pb-1">
+      <span class="text-xs tracking-widest uppercase" style="color: #6B6B6B; min-width: 4.5rem;">Location:</span>
+      <button onclick="setLocation('all')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-active" data-location-filter="all">All</button>
+      <button onclick="setLocation('china')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-location-filter="china">China</button>
+      <button onclick="setLocation('hk')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-location-filter="hk">Hong Kong</button>
+      <button onclick="setLocation('uk')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-location-filter="uk">UK</button>
+      <button onclick="setLocation('malaysia')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-location-filter="malaysia">Malaysia</button>
+      <button onclick="setLocation('canada')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-location-filter="canada">Canada</button>
     </div>
   </div>
 </section>
@@ -1455,34 +1475,50 @@ ${navHTML('projects')}
 </section>
 
 <script>
-function filterProjects(filter) {
-  // Update button styles
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    const isActive = btn.getAttribute('data-filter') === filter;
-    btn.classList.toggle('filter-active', isActive);
-    btn.classList.toggle('filter-inactive', !isActive);
-  });
+let activeSector = 'all';
+let activeLocation = 'all';
 
-  // Show/hide project cards
-  const cards = document.querySelectorAll('#projects-grid article[data-sector]');
+function applyFilters() {
+  const cards = document.querySelectorAll('#projects-grid article');
   let visibleCount = 0;
   cards.forEach(card => {
     const sector = card.getAttribute('data-sector');
-    const show = filter === 'all' || sector === filter;
+    const location = card.getAttribute('data-location');
+    const sectorMatch = activeSector === 'all' || sector === activeSector;
+    const locationMatch = activeLocation === 'all' || location === activeLocation;
+    const show = sectorMatch && locationMatch;
     card.style.display = show ? '' : 'none';
     if (show) visibleCount++;
   });
-
-  // Show empty state if nothing matches
   let emptyMsg = document.getElementById('no-projects-msg');
   if (!emptyMsg) {
     emptyMsg = document.createElement('p');
     emptyMsg.id = 'no-projects-msg';
     emptyMsg.style.cssText = 'color:#6B6B6B; font-size:0.85rem; grid-column:1/-1; padding:40px 0; text-align:center;';
-    emptyMsg.textContent = 'No projects in this category yet. More coming soon.';
+    emptyMsg.textContent = 'No projects match this combination. More coming soon.';
     document.getElementById('projects-grid').appendChild(emptyMsg);
   }
   emptyMsg.style.display = visibleCount === 0 ? '' : 'none';
+}
+
+function setSector(filter) {
+  activeSector = filter;
+  document.querySelectorAll('.filter-sector').forEach(btn => {
+    const isActive = btn.getAttribute('data-sector-filter') === filter;
+    btn.classList.toggle('filter-active', isActive);
+    btn.classList.toggle('filter-inactive', !isActive);
+  });
+  applyFilters();
+}
+
+function setLocation(filter) {
+  activeLocation = filter;
+  document.querySelectorAll('.filter-location').forEach(btn => {
+    const isActive = btn.getAttribute('data-location-filter') === filter;
+    btn.classList.toggle('filter-active', isActive);
+    btn.classList.toggle('filter-inactive', !isActive);
+  });
+  applyFilters();
 }
 </script>
 
