@@ -1412,8 +1412,15 @@ ${navHTML('projects')}
       <h1 class="heading-serif mb-6 fade-in" style="font-size: clamp(2.8rem, 5vw, 5rem); color: var(--arte-charcoal);">
         Projects That<br><em style="color: var(--arte-blue);">Speak for Themselves</em>
       </h1>
+
+      <!-- Selected projects notice -->
+      <div class="fade-in mb-5" style="display: inline-flex; align-items: center; gap: 0.6rem; background: rgba(123,142,185,0.1); border: 1px solid rgba(123,142,185,0.3); padding: 0.45rem 0.9rem;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--arte-blue); flex-shrink: 0; display: inline-block;"></span>
+        <span style="font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--arte-blue); font-family: 'Inter', sans-serif; font-weight: 500;">Selected Projects Only</span>
+      </div>
+
       <p class="text-sm leading-relaxed fade-in" style="color: var(--arte-mid); max-width: 480px;">
-        A selection of our work across luxury hospitality, commercial, residential and social sectors — spanning multiple continents. Each project shown is one of many; the full portfolio runs far wider.
+        What you see here is a curated sample — not the full picture. We have completed over 1,000 projects across luxury hospitality, commercial, residential and social sectors, spanning multiple continents. We show selected work on this site; if you'd like to see more relevant to your brief, just ask.
       </p>
     </div>
   </div>
