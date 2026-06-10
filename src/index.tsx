@@ -1448,8 +1448,8 @@ ${navHTML('projects')}
       <button onclick="setLocation('china')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-location-filter="china">China</button>
       <button onclick="setLocation('hk')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-location-filter="hk">Hong Kong</button>
       <button onclick="setLocation('uk')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-location-filter="uk">UK</button>
-      <button onclick="setLocation('malaysia')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-location-filter="malaysia">Malaysia</button>
       <button onclick="setLocation('canada')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-location-filter="canada">Canada</button>
+      <button onclick="setLocation('malaysia')" class="filter-btn filter-location text-xs px-4 py-2 border tracking-wider uppercase transition-all filter-inactive" data-location-filter="malaysia">Malaysia</button>
     </div>
   </div>
 </section>
