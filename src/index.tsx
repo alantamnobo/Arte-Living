@@ -1318,6 +1318,16 @@ function projectsPage() {
 
 
     {
+      title: 'Shenzhen Corporate Centre',
+      location: 'Shenzhen, China',
+      locationKey: 'china',
+      sector: 'Corporate Office',
+      tier: 'Premium Office',
+      scope: 'Conference suites, executive offices & open-plan floors',
+      img: '/static/china-office-cover.jpg',
+    },
+
+    {
       title: 'Harbour View Executive Suite',
       location: 'Hong Kong',
       locationKey: 'hk',
