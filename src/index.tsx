@@ -1318,6 +1318,20 @@ function projectsPage() {
 
 
     {
+      title: 'Guangzhou Financial Tower',
+      location: 'Guangzhou, China',
+      locationKey: 'china',
+      sector: 'Corporate Office',
+      tier: 'Premium Office',
+      scope: 'Reception lobby, executive offices & full-floor fit-out',
+      slug: 'guangzhou-financial-tower',
+      img: '/static/gz-office-cover.jpg',
+      gallery: [
+        { src: '/static/gz-office-cover.jpg', caption: 'Reception Lobby — marble joinery counter with brass trim' },
+      ],
+    },
+
+    {
       title: 'Shenzhen Corporate Centre',
       location: 'Shenzhen, China',
       locationKey: 'china',
@@ -1545,6 +1559,23 @@ const projectDetailData: Record<string, {
   description: string
   gallery: { src: string; caption: string }[]
 }> = {
+  'guangzhou-financial-tower': {
+    title: 'Guangzhou Financial Tower',
+    location: 'Guangzhou, China',
+    sector: 'Corporate Office',
+    tier: 'Premium Office',
+    scope: 'Reception lobby, executive offices & full-floor fit-out',
+    year: '2024',
+    description: `A prestige office fit-out in Guangzhou's financial district, designed to project quiet authority from the moment a visitor steps off the lift. ARTé delivered the complete furniture and joinery package across the reception lobby and executive floors.
+
+The centrepiece is a full-width reception counter in book-matched stone with brushed brass trim — flanked by a floor-to-ceiling Calacatta marble feature wall and flanking illuminated reeded-glass panels. The stone, brass and soft-white palette runs through every zone, from the partner offices to the client meeting suites.
+
+Every piece was manufactured to bespoke dimensions and detailed drawings, ensuring the furniture reads as architecture rather than an afterthought.`,
+    gallery: [
+      { src: '/static/gz-office-cover.jpg', caption: 'Reception Lobby — marble joinery counter with brass trim' },
+    ],
+  },
+
   'shenzhen-corporate-centre': {
     title: 'Shenzhen Corporate Centre',
     location: 'Shenzhen, China',
