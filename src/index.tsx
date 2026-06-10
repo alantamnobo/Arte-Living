@@ -1324,7 +1324,15 @@ function projectsPage() {
       sector: 'Corporate Office',
       tier: 'Premium Office',
       scope: 'Conference suites, executive offices & open-plan floors',
+      slug: 'shenzhen-corporate-centre',
       img: '/static/china-office-cover.jpg',
+      gallery: [
+        { src: '/static/china-office-cover.jpg', caption: 'Conference Suite — glass-walled meeting rooms with city views' },
+        { src: '/static/china-office-lounge.jpg', caption: 'Reception & Lounge — curved joinery counter, breakout seating' },
+        { src: '/static/china-office-exec.jpg', caption: 'Executive Office — bespoke desk, shelving & visitor seating' },
+        { src: '/static/china-office-openplan.jpg', caption: 'Open-Plan Floor — full workstation fit-out, night view' },
+        { src: '/static/china-office-workstations.jpg', caption: 'Workstation Area — ergonomic benching with amber-panel screens' },
+      ],
     },
 
     {
@@ -1537,6 +1545,27 @@ const projectDetailData: Record<string, {
   description: string
   gallery: { src: string; caption: string }[]
 }> = {
+  'shenzhen-corporate-centre': {
+    title: 'Shenzhen Corporate Centre',
+    location: 'Shenzhen, China',
+    sector: 'Corporate Office',
+    tier: 'Premium Office',
+    scope: 'Conference suites, executive offices & open-plan floors',
+    year: '2024',
+    description: `A full-floor office fit-out in one of Shenzhen's landmark commercial towers, delivered for a financial services client requiring both high-volume open-plan capacity and a premium executive environment under the same roof.
+
+ARTé designed and manufactured the complete furniture package across multiple floors: curved white Corian reception counters with integrated lighting, full workstation benching with amber acoustic screens, ergonomic task seating, and a glazed-wall conference suite furnished with a bespoke meeting table and upholstered side seating.
+
+The executive floor was fitted separately to a higher specification — dark walnut L-shaped desk with integrated shelving wall, white leather visitor chairs, and a private lounge area behind glass. The two-tone palette of warm white and amber runs consistently through every zone, creating a coherent identity across the entire fit-out.`,
+    gallery: [
+      { src: '/static/china-office-cover.jpg', caption: 'Conference Suite — glass-walled meeting rooms with city views' },
+      { src: '/static/china-office-lounge.jpg', caption: 'Reception & Lounge — curved joinery counter, breakout seating' },
+      { src: '/static/china-office-exec.jpg', caption: 'Executive Office — bespoke desk, shelving & visitor seating' },
+      { src: '/static/china-office-openplan.jpg', caption: 'Open-Plan Floor — full workstation fit-out, night view' },
+      { src: '/static/china-office-workstations.jpg', caption: 'Workstation Area — ergonomic benching with amber-panel screens' },
+    ],
+  },
+
   'harbour-view-executive-suite': {
     title: 'Harbour View Executive Suite',
     location: 'Hong Kong',
