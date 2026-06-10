@@ -1314,25 +1314,7 @@ ${footerHTML()}`
 
 function projectsPage() {
   const projects = [
-    {
-      title: 'The Meridian Grand',
-      location: 'London, UK',
-      locationKey: 'uk',
-      sector: 'Luxury Hotel',
-      tier: '5-Star Grade',
-      scope: '320 bedrooms, lobby, F&B areas',
-      img: 'https://sspark.genspark.ai/cfimages?u1=AaAgbX1DdalH6YaJ%2BJS51XAx5nKb4ygbX7J8lAVYQcJxpZgMHd6Cdio0cAo%2B2Pg29JNaBnAzjpX5DrclcO60bmijR45XCPv7CPMrOrP%2F3ghO7fmFf6YMF%2FBD1zmUjJrc6e27zF2C9EvNxWR0HnY%2BEzLXqG6yesKF%2Fw%3D%3D&u2=zkxm1jJH7xMOgwyG&width=2560',
-    },
 
-    {
-      title: 'Collegiate Quarter',
-      location: 'Manchester, UK',
-      locationKey: 'uk',
-      sector: 'Student Housing',
-      tier: 'Value Specification',
-      scope: '850 study bedrooms + communal',
-      img: 'https://sspark.genspark.ai/cfimages?u1=%2FqBTjNtnJ%2Bsc5V15aESGpO03%2Bal3R8Pz%2FqAEXJgze9PIlbvIhziSn6ftuEI3FUxME5w4G%2Bqk0XjRgy1i0iEzzGZK%2Bvb68zJyMc%2BLef3q6Q%3D%3D&u2=1IflmvVyVUdkhOJo&width=2560',
-    },
 
 
     {
