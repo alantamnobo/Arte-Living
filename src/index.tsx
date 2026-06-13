@@ -1309,6 +1309,20 @@ function projectsPage() {
     },
 
     {
+      title: 'Riverside Tower Hotel',
+      location: 'China',
+      locationKey: 'china',
+      sector: 'Luxury Hotel',
+      tier: 'Premium Hospitality',
+      scope: 'FF&E supply — guest rooms, suites, lobby & public areas',
+      slug: 'riverside-tower-hotel-china',
+      img: '/static/china-hotel-cover.jpg',
+      gallery: [
+        { src: '/static/china-hotel-cover.jpg', caption: 'Aerial view — twin towers rising above the riverfront' },
+      ],
+    },
+
+    {
       title: 'Guangzhou Financial Tower',
       location: 'Guangzhou, China',
       locationKey: 'china',
@@ -1568,6 +1582,23 @@ The resort's multiple food and beverage outlets were also furnished as part of t
       { src: '/static/hyatt-regency-guestroom.jpg', caption: 'Deluxe Guest Room — bespoke headboard, timber furniture & sea view' },
       { src: '/static/hyatt-regency-restaurant.jpg', caption: 'All-Day Dining Restaurant — custom banquette seating & joinery' },
       { src: '/static/hyatt-regency-restaurant2.jpg', caption: 'Specialty Restaurant — dining furniture across multiple F&B outlets' },
+    ],
+  },
+
+  'riverside-tower-hotel-china': {
+    title: 'Riverside Tower Hotel',
+    location: 'China',
+    sector: 'Luxury Hotel',
+    tier: 'Premium Hospitality',
+    scope: 'FF&E supply — guest rooms, suites, lobby & public areas',
+    year: '2023',
+    description: `A landmark luxury hotel project situated along one of China's most iconic urban waterfronts, where a pair of soaring glass towers form the centrepiece of a major mixed-use development. ARTé was engaged to supply the complete FF&E package across the hotel's full vertical programme — from the arrival lobby and podium public areas through to the guest rooms, suites and executive floors above.
+
+The brief called for a furniture language that matched the ambition of the architecture: refined materials, clean geometry, and a sense of quiet luxury that would hold its own against the dramatic riverfront backdrop. ARTé delivered bespoke case goods and upholstered pieces for every guest room category, with custom headboards, bedside tables and lounge chairs manufactured to precise finish and dimension specifications.
+
+The hotel's public areas — lobby lounge, all-day dining restaurant and executive club lounge — were each treated as distinct environments, furnished with bespoke joinery counters, banquette seating and loose furniture coordinated across the property's material palette. The project scale demanded the consistency and quality-control rigour that defines ARTé's large-format hospitality work.`,
+    gallery: [
+      { src: '/static/china-hotel-cover.jpg', caption: 'Aerial view — twin towers rising above the riverfront' },
     ],
   },
 
