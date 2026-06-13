@@ -1951,83 +1951,20 @@ ${navHTML('contact')}
   <div class="max-w-7xl mx-auto px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
       
-      <!-- Contact Form -->
+      <!-- Notion Form Embed -->
       <div class="fade-in">
         <p class="section-label mb-6">Send an Enquiry</p>
-        
-        <form id="contact-form" class="space-y-8">
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <label class="form-label block mb-2">First Name</label>
-              <input type="text" name="firstName" placeholder="Your first name" class="form-input">
-            </div>
-            <div>
-              <label class="form-label block mb-2">Last Name</label>
-              <input type="text" name="lastName" placeholder="Your last name" class="form-input">
-            </div>
-          </div>
-          
-          <div>
-            <label class="form-label block mb-2">Company / Organisation</label>
-            <input type="text" name="company" placeholder="Hotel group, developer, or company name" class="form-input">
-          </div>
-          
-          <div>
-            <label class="form-label block mb-2">Email Address</label>
-            <input type="email" name="email" placeholder="your@company.com" class="form-input">
-          </div>
-          
-          <div>
-            <label class="form-label block mb-2">Phone Number</label>
-            <input type="tel" name="phone" placeholder="+44 (0) 20..." class="form-input">
-          </div>
-          
-          <div>
-            <label class="form-label block mb-2">Project Type</label>
-            <select name="projectType" class="form-input" style="cursor: pointer;">
-              <option value="" disabled selected>Select sector...</option>
-              <option value="luxury-hotel">Luxury Hotel / Resort</option>
-              <option value="serviced-apartment">Serviced Apartments</option>
-              <option value="office">Corporate Office</option>
-              <option value="student-housing">Student Housing</option>
-              <option value="senior-living">Senior / Care Living</option>
-              <option value="private-residence">Private Residence</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          
-          <div>
-            <label class="form-label block mb-2">Estimated Number of Units / Rooms</label>
-            <input type="text" name="scale" placeholder="e.g. 200 bedrooms, 5 floors..." class="form-input">
-          </div>
-          
-          <div>
-            <label class="form-label block mb-2">Tell Us About Your Project</label>
-            <textarea name="message" rows="5" placeholder="Share your vision, timeline, and any specific requirements..." class="form-input resize-none" style="border-bottom: 1px solid var(--arte-border);"></textarea>
-          </div>
-          
-          <div>
-            <button type="submit" class="btn-primary w-full justify-center" id="submit-btn">
-              Send Enquiry <i class="fas fa-arrow-right text-xs"></i>
-            </button>
-          </div>
-          
-          <p class="text-xs" style="color: var(--arte-mid);">We respond to all enquiries within one business day.</p>
-          
-        </form>
-        
-        <!-- Success message -->
-        <div id="success-msg" class="hidden p-6 border mt-4" style="border-color: var(--arte-blue); background: rgba(123,142,185,0.06);">
-          <div class="flex items-start gap-3">
-            <i class="fas fa-check-circle mt-0.5" style="color: var(--arte-blue);"></i>
-            <div>
-              <p class="text-sm font-medium mb-1" style="color: var(--arte-charcoal);">Enquiry Received</p>
-              <p class="text-xs leading-relaxed" style="color: var(--arte-mid);">Thank you for getting in touch. A member of our team will contact you within one business day.</p>
-            </div>
-          </div>
+        <div style="border: 1px solid var(--arte-border); background: #fff; overflow: hidden;">
+          <iframe 
+            src="https://broadleaf-prepared-d27.notion.site/ebd//b2c769ece3da45489d431a7ce02eecf9"
+            width="100%" 
+            height="700" 
+            frameborder="0" 
+            allowfullscreen
+            style="display: block; border: none;">
+          </iframe>
         </div>
-        
+        <p class="text-xs mt-3" style="color: var(--arte-mid);">We respond to all enquiries within one business day.</p>
       </div>
       
       <!-- Info Sidebar -->
@@ -2104,31 +2041,25 @@ ${navHTML('contact')}
 </section>
 
 <script>
-document.getElementById('contact-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = document.getElementById('submit-btn');
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin text-xs mr-2"></i> Sending...';
-  btn.disabled = true;
-  
-  const data = {};
-  new FormData(this).forEach((v, k) => data[k] = v);
-  
-  try {
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    const result = await res.json();
-    if (result.success) {
-      document.getElementById('contact-form').style.display = 'none';
-      document.getElementById('success-msg').classList.remove('hidden');
+  // Nav scroll behaviour
+  const contactNav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      contactNav.style.background = 'rgba(255,255,255,0.97)';
+      contactNav.style.borderBottom = '1px solid #E8E4DF';
+      contactNav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.06)';
+    } else {
+      contactNav.style.background = 'transparent';
+      contactNav.style.borderBottom = 'none';
+      contactNav.style.boxShadow = 'none';
     }
-  } catch(err) {
-    btn.innerHTML = 'Send Enquiry <i class="fas fa-arrow-right text-xs"></i>';
-    btn.disabled = false;
-  }
-});
+  });
+  // Fade-in
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); } });
+  }, { threshold: 0.1 });
+  fadeEls.forEach(el => obs.observe(el));
 </script>
 
 ${footerHTML()}`
