@@ -1291,6 +1291,20 @@ function projectsPage() {
 
 
     {
+      title: 'Hyatt Regency Resort',
+      location: 'China',
+      locationKey: 'china',
+      sector: 'Luxury Hotel',
+      tier: 'Premium Hospitality',
+      scope: 'Full FF&E supply — guest rooms, suites, lobby & resort facilities',
+      slug: 'hyatt-regency-resort-china',
+      img: '/static/hyatt-regency-china-cover.jpg',
+      gallery: [
+        { src: '/static/hyatt-regency-china-cover.jpg', caption: 'Aerial view — Hyatt Regency Resort, China' },
+      ],
+    },
+
+    {
       title: 'Guangzhou Financial Tower',
       location: 'Guangzhou, China',
       locationKey: 'china',
