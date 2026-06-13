@@ -1550,6 +1550,27 @@ const projectDetailData: Record<string, {
   description: string
   gallery: { src: string; caption: string }[]
 }> = {
+  'hyatt-regency-resort-china': {
+    title: 'Hyatt Regency Resort',
+    location: 'China',
+    sector: 'Luxury Hotel',
+    tier: 'Premium Hospitality',
+    scope: 'Full FF&E supply — guest rooms, suites, lobby & resort facilities',
+    year: '2024',
+    description: `A full-scale FF&E supply project for a Hyatt Regency resort property in China, encompassing every furniture category across a large-format resort destination.
+
+ARTé delivered the complete furniture package for guest rooms and suites — including bespoke upholstered headboards, timber case goods, lounge seating and dining tables — through to the lobby, corridors and resort common areas. The brief required both the warmth and residential quality expected of a premium hotel stay, and the durability to perform across hundreds of rooms at volume.
+
+The resort's multiple food and beverage outlets were also furnished as part of the scope: custom banquette seating, dining chairs and tables for the all-day restaurant, and bespoke furniture across the specialty dining venues. Each outlet was treated as a distinct design environment while maintaining a coherent material language throughout the property.`,
+    gallery: [
+      { src: '/static/hyatt-regency-china-cover.jpg', caption: 'Aerial view — resort complex at dusk' },
+      { src: '/static/hyatt-regency-suite.jpg', caption: 'Premier Suite — bedroom, living room & marble bathroom' },
+      { src: '/static/hyatt-regency-guestroom.jpg', caption: 'Deluxe Guest Room — bespoke headboard, timber furniture & sea view' },
+      { src: '/static/hyatt-regency-restaurant.jpg', caption: 'All-Day Dining Restaurant — custom banquette seating & joinery' },
+      { src: '/static/hyatt-regency-restaurant2.jpg', caption: 'Specialty Restaurant — dining furniture across multiple F&B outlets' },
+    ],
+  },
+
   'guangzhou-financial-tower': {
     title: 'Guangzhou Financial Tower',
     location: 'Guangzhou, China',
