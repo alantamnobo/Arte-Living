@@ -31,9 +31,59 @@ app.get('/contact', (c) => {
 // Contact form submission
 app.post('/api/contact', async (c) => {
   const body = await c.req.json()
-  // In production, integrate with email service
-  console.log('Contact form submission:', body)
-  return c.json({ success: true, message: 'Thank you for your enquiry. We will be in touch shortly.' })
+  const { firstName, lastName, company, email, phone, projectType, units, message } = body
+
+  const RESEND_API_KEY = (c.env as any)?.RESEND_API_KEY || 're_cUWsgWQS_ADvgH3quA64U1cpoVRqAo4CQ'
+
+  const htmlBody = `
+    <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #2C2C2C;">
+      <div style="background: #7B8EB9; padding: 24px 32px;">
+        <h1 style="color: #fff; margin: 0; font-size: 1.4rem; font-weight: 400; letter-spacing: 0.1em;">NEW ENQUIRY — ARTé</h1>
+      </div>
+      <div style="padding: 32px; background: #FAF9F7; border: 1px solid #E8E4DF; border-top: none;">
+        <table style="width: 100%; border-collapse: collapse;">
+          <tr><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF; color: #6B6B6B; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; width: 40%;">Name</td><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF;">${firstName || ''} ${lastName || ''}</td></tr>
+          <tr><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF; color: #6B6B6B; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Company</td><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF;">${company || '—'}</td></tr>
+          <tr><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF; color: #6B6B6B; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Email</td><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF;"><a href="mailto:${email}" style="color: #7B8EB9;">${email || '—'}</a></td></tr>
+          <tr><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF; color: #6B6B6B; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Phone</td><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF;">${phone || '—'}</td></tr>
+          <tr><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF; color: #6B6B6B; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Project Type</td><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF;">${projectType || '—'}</td></tr>
+          <tr><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF; color: #6B6B6B; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Units / Rooms</td><td style="padding: 10px 0; border-bottom: 1px solid #E8E4DF;">${units || '—'}</td></tr>
+        </table>
+        ${message ? `<div style="margin-top: 24px;"><p style="color: #6B6B6B; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">Message</p><p style="line-height: 1.8; white-space: pre-line;">${message}</p></div>` : ''}
+      </div>
+      <div style="padding: 16px 32px; background: #F5F0EA; border: 1px solid #E8E4DF; border-top: none; font-size: 0.75rem; color: #6B6B6B;">
+        Sent from arte-living.com contact form
+      </div>
+    </div>
+  `
+
+  try {
+    const resendRes = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: 'ARTé Website <onboarding@resend.dev>',
+        to: ['enquiries@arte-living.com'],
+        reply_to: email || undefined,
+        subject: `New Enquiry${company ? ` — ${company}` : ''}${projectType ? ` (${projectType})` : ''}`,
+        html: htmlBody,
+      }),
+    })
+
+    if (!resendRes.ok) {
+      const err = await resendRes.text()
+      console.error('Resend error:', err)
+      return c.json({ success: false, message: 'Failed to send enquiry. Please email us directly at enquiries@arte-living.com' }, 500)
+    }
+
+    return c.json({ success: true, message: 'Thank you for your enquiry. A member of our team will contact you within one business day.' })
+  } catch (err) {
+    console.error('Contact form error:', err)
+    return c.json({ success: false, message: 'Failed to send enquiry. Please email us directly at enquiries@arte-living.com' }, 500)
+  }
 })
 
 function navHTML(activePage: string) {
