@@ -682,14 +682,14 @@ ${navHTML('home')}
       <!-- Luxury Hotels -->
       <div class="sector-card p-8 fade-in" style="background: var(--arte-cream);">
         <div class="mb-6">
-          <img src="https://sspark.genspark.ai/cfimages?u1=GNWa9lB3h0kOONsP0VmaoO8R058LWMIeAEeJLur%2FoLhO%2B%2BbA7n4RlYuGntyMjFBaK%2FGc%2BGXITwvMLzoPlhXYwWPv5xnOR2Kj%2Fi%2FgoWrwJBpst2dlsMhuR9Y0YQ7%2BJdoW398C&u2=02wQXjxM51Kal9b4&width=2560" 
+          <img src="/static/sector-luxury-hotel.jpg" 
                alt="Luxury Hotel Furniture" class="w-full object-cover aspect-16-9">
         </div>
         <div class="w-8 h-px mb-4" style="background: var(--arte-blue);"></div>
-        <p class="section-label mb-2">Tier 01</p>
+        <p class="section-label mb-2">Premium Specification</p>
         <h3 class="heading-serif text-xl mb-3">Luxury Hotels &<br>Resorts</h3>
         <p class="text-xs leading-relaxed mb-4" style="color: var(--arte-mid);">
-          Mandarin Oriental, Four Seasons and peers demand furniture that embodies their brand. We deliver heirloom-quality pieces that elevate the guest experience and stand the test of time.
+          JW Marriott, Four Seasons and peers demand furniture that embodies their brand. We deliver heirloom-quality pieces that elevate the guest experience and stand the test of time.
         </p>
         <div class="flex flex-wrap gap-2">
           <span class="text-xs px-2 py-1" style="background: rgba(123,142,185,0.08); color: var(--arte-blue);">5-Star Grade</span>
@@ -700,11 +700,11 @@ ${navHTML('home')}
       <!-- Serviced Apartments -->
       <div class="sector-card p-8 fade-in" style="background: var(--arte-cream);">
         <div class="mb-6">
-          <img src="https://sspark.genspark.ai/cfimages?u1=vDoYq9DYLf7TZ5SaO4Aa0Dj%2FOy3Bw6lRMl029trWMCmKXrTgKLWze7RiY%2FcPv2RF4mBD3s63%2FeLwra464hccrayfsNfq6GBQJWmoVNTz1tUw0sX65aEOlAbyfVcZSkx10zcrcW46qwy83IQl9%2FvWnhr6wrBr8l4%3D&u2=vqoHJXUlMlIYOvnm&width=2560" 
+          <img src="/static/sector-serviced-apt.jpg" 
                alt="Serviced Apartment Furniture" class="w-full object-cover aspect-16-9">
         </div>
         <div class="w-8 h-px mb-4" style="background: var(--arte-blue);"></div>
-        <p class="section-label mb-2">Tier 01</p>
+        <p class="section-label mb-2">Premium Specification</p>
         <h3 class="heading-serif text-xl mb-3">Serviced<br>Apartments</h3>
         <p class="text-xs leading-relaxed mb-4" style="color: var(--arte-mid);">
           The discerning long-stay traveller expects hotel comfort with residential warmth. We furnish serviced apartments and branded residences with pieces that feel both curated and liveable.
@@ -718,11 +718,11 @@ ${navHTML('home')}
       <!-- Corporate Offices -->
       <div class="sector-card p-8 fade-in" style="background: var(--arte-cream);">
         <div class="mb-6">
-          <img src="https://sspark.genspark.ai/cfimages?u1=D%2BjO5IRrFzm726ACprdTAD3Ji8aoDy8%2F61TyTm56CcsP%2Byxh26ySw0E0j4%2B%2BKPw7HwWRznR%2BxZxGcb8ThRERqQXg3%2B43mG9GIVhps%2B9Hzsv0cLDezUQIugPS0tfUm243z3lPT4vARbjIG8Ey77ifQ1LKzGXyTw%3D%3D&u2=C9Sq6Z2fByU1MvH4&width=2560" 
-               alt="Office Furniture" class="w-full object-cover aspect-16-9">
+          <img src="/static/sector-corporate-office.jpg" 
+               alt="Corporate Office Furniture" class="w-full object-cover aspect-16-9">
         </div>
         <div class="w-8 h-px mb-4" style="background: var(--arte-blue);"></div>
-        <p class="section-label mb-2">Tier 01 – 02</p>
+        <p class="section-label mb-2">Premium – Value</p>
         <h3 class="heading-serif text-xl mb-3">Corporate<br>Offices</h3>
         <p class="text-xs leading-relaxed mb-4" style="color: var(--arte-mid);">
           From boardrooms to breakout spaces, we create working environments that reflect brand identity and support productivity — elegant, functional, and built to last.
@@ -736,11 +736,11 @@ ${navHTML('home')}
       <!-- Student Housing -->
       <div class="sector-card p-8 fade-in" style="background: var(--arte-cream);">
         <div class="mb-6">
-          <img src="https://sspark.genspark.ai/cfimages?u1=CpGy7xPPebVr8EbiUwe2hGPXpdFOVpe2NmQlrbJLsHt0Busbbsanip6E6g2dzxxll0994N%2BdwCNHnfRKkROXx0hYnlvASIKForDei1f%2F%2FMheeII0t1H4j2iFlVcZZJbWJetg52SXtY62gTY6E9mTv9BM5zBheXCX73ekTTUeG3UD7kMszJe6cMXMAC3ZluaWgfvlNAaw%2F94%3D&u2=QnIstrDIyYV%2F0oew&width=2560" 
+          <img src="/static/sector-student-housing.jpg" 
                alt="Student Housing Furniture" class="w-full object-cover aspect-16-9">
         </div>
         <div class="w-8 h-px mb-4" style="background: var(--arte-blue);"></div>
-        <p class="section-label mb-2">Tier 02</p>
+        <p class="section-label mb-2">Value Specification</p>
         <h3 class="heading-serif text-xl mb-3">Student<br>Housing</h3>
         <p class="text-xs leading-relaxed mb-4" style="color: var(--arte-mid);">
           Value and durability without compromising on design. We help student housing developers maximise ROI with smart, cost-efficient furniture packs that still look and feel genuinely good.
@@ -754,11 +754,11 @@ ${navHTML('home')}
       <!-- Senior Living -->
       <div class="sector-card p-8 fade-in" style="background: var(--arte-cream);">
         <div class="mb-6">
-          <img src="https://sspark.genspark.ai/cfimages?u1=lk3ATvy9Xa9%2BG2POrLF%2BbhrI3CjI%2B1OA9qEfby40Fqg1%2F2HSe5korg84vVDhaiZgZVCTDbnNbVxlsLRdyScursV38C8zl%2BbbboHJsKz9m4C33cPveEGfnq%2BiS%2FGPtj2uJowcoppGrURXd7xdkwU5Vppt4QrL0Bfaw6QkF2vxwnEXaH4%3D&u2=Y5nU771aqxuMMOEQ&width=2560" 
+          <img src="/static/sector-senior-living.jpg" 
                alt="Senior Living Furniture" class="w-full object-cover aspect-16-9">
         </div>
         <div class="w-8 h-px mb-4" style="background: var(--arte-blue);"></div>
-        <p class="section-label mb-2">Tier 02</p>
+        <p class="section-label mb-2">Value Specification</p>
         <h3 class="heading-serif text-xl mb-3">Senior &<br>Care Living</h3>
         <p class="text-xs leading-relaxed mb-4" style="color: var(--arte-mid);">
           Thoughtfully designed for wellbeing, safety, and dignity. Our senior living collections balance practicality with warmth, creating homes where residents feel truly at ease.
@@ -772,7 +772,7 @@ ${navHTML('home')}
       <!-- HNW Residential -->
       <div class="sector-card p-8 fade-in" style="background: linear-gradient(135deg, rgba(123,142,185,0.06) 0%, #fff 100%);">
         <div class="mb-6">
-          <img src="https://sspark.genspark.ai/cfimages?u1=9CFsU6OrOGuEZ3ssLFewKB%2BHrG7SREMtMASkVtKOK8%2BJZRRAt7FtwOp46mJKqTv6tV9SVoZOOBTqv%2B8MPAFrzL7vVF26b5w9d38gEgKlYllhOhDw5X6poczp3TtJT%2BicONMtTTHnf1qLi661KbkAYnTbWjRrK9VBGeFhZ%2Fypo%2FhsP1TiaQ7ivH5ai6DniWpc30CRkU44%2F3u02RlxqroHTQfyE1%2BM5By9CtNWQgYtD%2BxN9kMm%2FALhJBrJOF5H85U5vL6OBmI8NoGmrl2%2B6wA%3D&u2=HedbCUn%2FhBx3RwBF&width=2560" 
+          <img src="/static/sector-private-residence.jpg" 
                alt="Private Residence Furniture" class="w-full object-cover aspect-16-9">
         </div>
         <div class="w-8 h-px mb-4" style="background: var(--arte-blue);"></div>
