@@ -1951,20 +1951,32 @@ ${navHTML('contact')}
   <div class="max-w-7xl mx-auto px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
       
-      <!-- Notion Form Embed -->
-      <div class="fade-in">
-        <p class="section-label mb-6">Send an Enquiry</p>
-        <div style="border: 1px solid var(--arte-border); background: #fff; overflow: hidden;">
-          <iframe 
-            src="https://broadleaf-prepared-d27.notion.site/ebd//b2c769ece3da45489d431a7ce02eecf9"
-            width="100%" 
-            height="700" 
-            frameborder="0" 
-            allowfullscreen
-            style="display: block; border: none;">
-          </iframe>
-        </div>
-        <p class="text-xs mt-3" style="color: var(--arte-mid);">We respond to all enquiries within one business day.</p>
+      <!-- Enquiry CTA -->
+      <div class="fade-in" style="display: flex; flex-direction: column; justify-content: center; padding: clamp(2rem, 5vw, 4rem) 0;">
+        <p class="section-label mb-6">Start a Conversation</p>
+        <h2 class="heading-serif mb-6" style="font-size: clamp(1.8rem, 3vw, 3rem); color: var(--arte-charcoal); line-height: 1.2;">
+          Tell Us About<br><em style="color: var(--arte-blue);">Your Project</em>
+        </h2>
+        <p class="text-sm leading-relaxed mb-10" style="color: var(--arte-mid); max-width: 420px;">
+          Whether you have detailed drawings or just an early concept — we'd love to hear from you. Share your brief and we'll come back with a clear picture of how ARTé can help.
+        </p>
+
+        <!-- Primary CTA button -->
+        <a href="https://broadleaf-prepared-d27.notion.site/ebd//b2c769ece3da45489d431a7ce02eecf9"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="display: inline-flex; align-items: center; gap: 0.75rem; background: var(--arte-charcoal); color: #fff; padding: 1.1rem 2.5rem; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; font-family: 'Inter', sans-serif; font-weight: 400; border: 2px solid var(--arte-charcoal); transition: all 0.3s ease; align-self: flex-start;"
+           onmouseover="this.style.background='transparent'; this.style.color='var(--arte-charcoal)';"
+           onmouseout="this.style.background='var(--arte-charcoal)'; this.style.color='#fff';">
+          Tell Us About Your Project
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease;">
+            <path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <p class="text-xs mt-5" style="color: var(--arte-mid); letter-spacing: 0.05em;">
+          We respond to all enquiries within one business day.
+        </p>
       </div>
       
       <!-- Info Sidebar -->
