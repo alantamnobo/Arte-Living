@@ -1296,7 +1296,7 @@ function projectsPage() {
       locationKey: 'china',
       sector: 'Luxury Hotel',
       tier: 'Premium Hospitality',
-      scope: 'Full FF&E supply — guest rooms, suites, lobby & resort facilities',
+      scope: 'FF&E supply — guest rooms, suites, lobby & resort facilities',
       slug: 'hyatt-regency-resort-china',
       img: '/static/hyatt-regency-china-cover.jpg',
       gallery: [
@@ -1555,8 +1555,8 @@ const projectDetailData: Record<string, {
     location: 'China',
     sector: 'Luxury Hotel',
     tier: 'Premium Hospitality',
-    scope: 'Full FF&E supply — guest rooms, suites, lobby & resort facilities',
-    year: '2024',
+    scope: 'FF&E supply — guest rooms, suites, lobby & resort facilities',
+    year: '2022',
     description: `A full-scale FF&E supply project for a Hyatt Regency resort property in China, encompassing every furniture category across a large-format resort destination.
 
 ARTé delivered the complete furniture package for guest rooms and suites — including bespoke upholstered headboards, timber case goods, lounge seating and dining tables — through to the lobby, corridors and resort common areas. The brief required both the warmth and residential quality expected of a premium hotel stay, and the durability to perform across hundreds of rooms at volume.
