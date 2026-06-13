@@ -1300,7 +1300,11 @@ function projectsPage() {
       slug: 'hyatt-regency-resort-china',
       img: '/static/hyatt-regency-china-cover.jpg',
       gallery: [
-        { src: '/static/hyatt-regency-china-cover.jpg', caption: 'Aerial view — Hyatt Regency Resort, China' },
+        { src: '/static/hyatt-regency-china-cover.jpg', caption: 'Aerial view — resort complex at dusk' },
+        { src: '/static/hyatt-regency-suite.jpg', caption: 'Premier Suite — bedroom, living room & marble bathroom' },
+        { src: '/static/hyatt-regency-guestroom.jpg', caption: 'Deluxe Guest Room — bespoke headboard, timber furniture & sea view' },
+        { src: '/static/hyatt-regency-restaurant.jpg', caption: 'All-Day Dining Restaurant — custom banquette seating & joinery' },
+        { src: '/static/hyatt-regency-restaurant2.jpg', caption: 'Specialty Restaurant — dining furniture across multiple F&B outlets' },
       ],
     },
 
