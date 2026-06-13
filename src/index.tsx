@@ -1309,16 +1309,16 @@ function projectsPage() {
     },
 
     {
-      title: 'Riverside Tower Hotel',
-      location: 'China',
+      title: 'The Ritz-Carlton, Harbin',
+      location: 'Harbin, China',
       locationKey: 'china',
       sector: 'Luxury Hotel',
-      tier: 'Premium Hospitality',
+      tier: 'Ultra-Luxury Hospitality',
       scope: 'FF&E supply — guest rooms, suites, lobby & public areas',
-      slug: 'riverside-tower-hotel-china',
+      slug: 'ritz-carlton-harbin',
       img: '/static/china-hotel-cover.jpg',
       gallery: [
-        { src: '/static/china-hotel-cover.jpg', caption: 'Aerial view — twin towers rising above the riverfront' },
+        { src: '/static/china-hotel-cover.jpg', caption: 'Exterior — The Ritz-Carlton towers above the Harbin riverfront in winter' },
       ],
     },
 
@@ -1585,20 +1585,20 @@ The resort's multiple food and beverage outlets were also furnished as part of t
     ],
   },
 
-  'riverside-tower-hotel-china': {
-    title: 'Riverside Tower Hotel',
-    location: 'China',
+  'ritz-carlton-harbin': {
+    title: 'The Ritz-Carlton, Harbin',
+    location: 'Harbin, China',
     sector: 'Luxury Hotel',
-    tier: 'Premium Hospitality',
+    tier: 'Ultra-Luxury Hospitality',
     scope: 'FF&E supply — guest rooms, suites, lobby & public areas',
     year: '2023',
-    description: `A landmark luxury hotel project situated along one of China's most iconic urban waterfronts, where a pair of soaring glass towers form the centrepiece of a major mixed-use development. ARTé was engaged to supply the complete FF&E package across the hotel's full vertical programme — from the arrival lobby and podium public areas through to the guest rooms, suites and executive floors above.
+    description: `A prestigious FF&E supply engagement for The Ritz-Carlton, Harbin — one of the brand's flagship properties in Northeast China, set along the Songhua River in a city renowned for its dramatic winter landscape and European architectural heritage.
 
-The brief called for a furniture language that matched the ambition of the architecture: refined materials, clean geometry, and a sense of quiet luxury that would hold its own against the dramatic riverfront backdrop. ARTé delivered bespoke case goods and upholstered pieces for every guest room category, with custom headboards, bedside tables and lounge chairs manufactured to precise finish and dimension specifications.
+ARTé was engaged to deliver the complete furniture package across the hotel's guest room and suite inventory, supplying bespoke case goods, upholstered headboards, lounge seating and bedside furnishings manufactured to The Ritz-Carlton's exacting brand standards. Every piece was produced to specification, with materials, finishes and tolerances subject to the rigorous quality review that ultra-luxury hotel brands require.
 
-The hotel's public areas — lobby lounge, all-day dining restaurant and executive club lounge — were each treated as distinct environments, furnished with bespoke joinery counters, banquette seating and loose furniture coordinated across the property's material palette. The project scale demanded the consistency and quality-control rigour that defines ARTé's large-format hospitality work.`,
+The project also encompassed key public area furniture — lobby lounge seating, corridor joinery and select F&B outlet furnishings — each designed to complement the property's interior architecture and hold its own against the hotel's signature level of finish. Delivering at this standard, at volume, in one of China's most demanding hospitality markets, is a benchmark ARTé continues to build on.`,
     gallery: [
-      { src: '/static/china-hotel-cover.jpg', caption: 'Aerial view — twin towers rising above the riverfront' },
+      { src: '/static/china-hotel-cover.jpg', caption: 'Exterior — The Ritz-Carlton towers above the Harbin riverfront in winter' },
     ],
   },
 
