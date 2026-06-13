@@ -1693,23 +1693,23 @@ ${Ce("contact")}
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <label class="form-label block mb-2">First Name *</label>
-              <input type="text" name="firstName" placeholder="Your first name" class="form-input" required>
+              <label class="form-label block mb-2">First Name</label>
+              <input type="text" name="firstName" placeholder="Your first name" class="form-input">
             </div>
             <div>
-              <label class="form-label block mb-2">Last Name *</label>
-              <input type="text" name="lastName" placeholder="Your last name" class="form-input" required>
+              <label class="form-label block mb-2">Last Name</label>
+              <input type="text" name="lastName" placeholder="Your last name" class="form-input">
             </div>
           </div>
           
           <div>
-            <label class="form-label block mb-2">Company / Organisation *</label>
-            <input type="text" name="company" placeholder="Hotel group, developer, or company name" class="form-input" required>
+            <label class="form-label block mb-2">Company / Organisation</label>
+            <input type="text" name="company" placeholder="Hotel group, developer, or company name" class="form-input">
           </div>
           
           <div>
-            <label class="form-label block mb-2">Email Address *</label>
-            <input type="email" name="email" placeholder="your@company.com" class="form-input" required>
+            <label class="form-label block mb-2">Email Address</label>
+            <input type="email" name="email" placeholder="your@company.com" class="form-input">
           </div>
           
           <div>
@@ -1718,8 +1718,8 @@ ${Ce("contact")}
           </div>
           
           <div>
-            <label class="form-label block mb-2">Project Type *</label>
-            <select name="projectType" class="form-input" required style="cursor: pointer;">
+            <label class="form-label block mb-2">Project Type</label>
+            <select name="projectType" class="form-input" style="cursor: pointer;">
               <option value="" disabled selected>Select sector...</option>
               <option value="luxury-hotel">Luxury Hotel / Resort</option>
               <option value="serviced-apartment">Serviced Apartments</option>
@@ -1737,8 +1737,8 @@ ${Ce("contact")}
           </div>
           
           <div>
-            <label class="form-label block mb-2">Tell Us About Your Project *</label>
-            <textarea name="message" rows="5" placeholder="Share your vision, timeline, and any specific requirements..." class="form-input resize-none" required style="border-bottom: 1px solid var(--arte-border);"></textarea>
+            <label class="form-label block mb-2">Tell Us About Your Project</label>
+            <textarea name="message" rows="5" placeholder="Share your vision, timeline, and any specific requirements..." class="form-input resize-none" style="border-bottom: 1px solid var(--arte-border);"></textarea>
           </div>
           
           <div>
