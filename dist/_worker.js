@@ -1729,7 +1729,7 @@ ${Ce("contact")}
         </a>
 
         <p class="text-xs mt-5" style="color: var(--arte-mid); letter-spacing: 0.05em;">
-          We respond to all enquiries within one business day.
+          We will try to respond to your enquiry within the business day.
         </p>
       </div>
       
